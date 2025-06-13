@@ -61,6 +61,12 @@
 
 
 
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
@@ -197,7 +203,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/13/mt_introduction/" class="post-title-link" itemprop="url">introForMT</a>
+          <a href="/2025/06/13/mt_introduction/" class="post-title-link" itemprop="url">mt_introduction</a>
         </h2>
 
         <div class="post-meta-container">
@@ -209,7 +215,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-06-13 20:05:31 / Modified: 21:22:34" itemprop="dateCreated datePublished" datetime="2025-06-13T20:05:31+08:00">2025-06-13</time>
+      <time title="Created: 2025-06-13 20:05:31 / Modified: 21:36:05" itemprop="dateCreated datePublished" datetime="2025-06-13T20:05:31+08:00">2025-06-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -235,25 +241,62 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h2 id="Riemann-Integral"><a href="#Riemann-Integral" class="headerlink" title="Riemann Integral"></a>Riemann Integral</h2><h3 id="Darboux’s-Definition"><a href="#Darboux’s-Definition" class="headerlink" title="Darboux’s Definition"></a>Darboux’s Definition</h3><p>Let $\mathscr P$ be a partition of an interval $[a, b)\subseteq\mathbb R$, which is defined by ${a_i}<em>{i&#x3D;0}^k$ associated with ${x_i}</em>{i&#x3D;1}^k$ for $x_i\in[a_{i-1},a_i]$. A function $f$ is assumed to be bounded on $[a,b]$.</p>
+          <h1 id="introduction">Introduction</h1>
+<h2 id="riemann-integral">Riemann Integral</h2>
+<h3 id="darbouxs-definition">Darboux’s Definition</h3>
+<p>Let <span class="math inline">𝒫</span> be a partition of an interval
+<span class="math inline">[<em>a</em>, <em>b</em>) ⊆ ℝ</span>, which is
+defined by <span
+class="math inline">{<em>a</em><sub><em>i</em></sub>}<sub><em>i</em> = 0</sub><sup><em>k</em></sup></span>
+associated with <span
+class="math inline">{<em>x</em><sub><em>i</em></sub>}<sub><em>i</em> = 1</sub><sup><em>k</em></sup></span>
+for <span
+class="math inline"><em>x</em><sub><em>i</em></sub> ∈ [<em>a</em><sub><em>i</em> − 1</sub>, <em>a</em><sub><em>i</em></sub>]</span>.
+A function <span class="math inline"><em>f</em></span> is assumed to be
+bounded on <span
+class="math inline">[<em>a</em>, <em>b</em>]</span>.</p>
 <ul>
-<li><code>lower sum</code>: $l(f,\mathscr P)&#x3D;\sum_{i&#x3D;1}^k \inf{f(x):x\in[a_{i-1},a_i]}\cdot (a_i-a_{i-1})$<ul>
-<li><code>lower integral</code>: $\underline{\int}<em>{a}^bf&#x3D;\sup</em>{\mathscr P}l(f,\mathscr P)$</li>
-</ul>
-</li>
-<li><code>upper sum</code>: $u(f,\mathscr P)&#x3D;\sum_{i&#x3D;1}^k \sup{f(x):x\in[a_{i-1},a_i]}\cdot (a_i-a_{i-1})$<ul>
-<li><code>upper integral</code>: $\overline{\int}<em>{a}^bf&#x3D;\inf</em>{\mathscr P}u(f,\mathscr P)$</li>
-</ul>
-</li>
-</ul>
-<p>Then, $f$ is said to be <em>Riemann Integrable</em> on $[a,b]$ if $\overline{\int}<em>{a}^bf&#x3D;\underline{\int}</em>{a}^bf$ with the <em>Riemann integral</em> of $\int_{a}^b&#x3D;\overline{\int}<em>{a}^bf&#x3D;\underline{\int}</em>{a}^bf$.</p>
-<h3 id="Riemann’s-Definition"><a href="#Riemann’s-Definition" class="headerlink" title="Riemann’s Definition"></a>Riemann’s Definition</h3><p>To start with, the <em>mesh</em> of a partition $\mathscr P$ is defined as $\Vert \mathscr P \Vert&#x3D;\max_i(a_i-a_{i-1})$.</p>
+<li><code>lower sum</code>: <span class="math inline">$l(f,\mathscr
+P)=\sum_{i=1}^k \inf\{f(x):x\in[a_{i-1},a_i]\}\cdot
+(a_i-a_{i-1})$</span>
 <ul>
-<li><code>Riemann sum</code>: $\mathscr R(f,\mathscr P)&#x3D;\sum_{i&#x3D;1}^kf(x_i)(a_i-a_{i-1})$.</li>
-</ul>
-<p>Then, if there exists a number $L$ such that $\lim_{\mathscr P}\mathscr R(f,\mathscr P)&#x3D;L$ where $\Vert\mathscr P\Vert$ approaches $0$, which is equivalent to the following:</p>
+<li><code>lower integral</code>: <span
+class="math inline">$\underline{\int}_{a}^bf=\sup_{\mathscr
+P}l(f,\mathscr P)$</span></li>
+</ul></li>
+<li><code>upper sum</code>: <span class="math inline">$u(f,\mathscr
+P)=\sum_{i=1}^k \sup\{f(x):x\in[a_{i-1},a_i]\}\cdot
+(a_i-a_{i-1})$</span>
 <ul>
-<li>for $\forall \varepsilon&gt;0$, there $\exist \delta&gt;0$ such that $\vert\mathscr R(f,\mathscr P)-L\vert&lt;\varepsilon$ for $\forall \Vert\mathscr P\Vert&lt;\delta$.</li>
+<li><code>upper integral</code>: <span
+class="math inline">$\overline{\int}_{a}^bf=\inf_{\mathscr
+P}u(f,\mathscr P)$</span></li>
+</ul></li>
+</ul>
+<p>Then, <span class="math inline"><em>f</em></span> is said to be
+<em>Riemann Integrable</em> on <span
+class="math inline">[<em>a</em>, <em>b</em>]</span> if <span
+class="math inline">$\overline{\int}_{a}^bf=\underline{\int}_{a}^bf$</span>
+with the <em>Riemann integral</em> of <span
+class="math inline">$\int_{a}^b=\overline{\int}_{a}^bf=\underline{\int}_{a}^bf$</span>.</p>
+<h3 id="riemanns-definition">Riemann’s Definition</h3>
+<p>To start with, the <em>mesh</em> of a partition <span
+class="math inline">𝒫</span> is defined as <span
+class="math inline">‖𝒫‖ = max<sub><em>i</em></sub>(<em>a</em><sub><em>i</em></sub> − <em>a</em><sub><em>i</em> − 1</sub>)</span>.</p>
+<ul>
+<li><code>Riemann sum</code>: <span class="math inline">$\mathscr
+R(f,\mathscr P)=\sum_{i=1}^kf(x_i)(a_i-a_{i-1})$</span>.</li>
+</ul>
+<p>Then, if there exists a number <span
+class="math inline"><em>L</em></span> such that <span
+class="math inline">lim<sub>𝒫</sub>ℛ(<em>f</em>, 𝒫) = <em>L</em></span>
+where <span class="math inline">‖𝒫‖</span> approaches <span
+class="math inline">0</span>, which is equivalent to the following:</p>
+<ul>
+<li>for <span class="math inline">∀<em>ε</em> &gt; 0</span>, there <span
+class="math inline">∃<em>δ</em> &gt; 0</span> such that <span
+class="math inline">|ℛ(<em>f</em>, 𝒫) − <em>L</em>| &lt; <em>ε</em></span>
+for <span class="math inline">∀‖𝒫‖ &lt; <em>δ</em></span>.</li>
 </ul>
 
       
@@ -324,19 +367,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
