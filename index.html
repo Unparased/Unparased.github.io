@@ -137,9 +137,19 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -169,7 +179,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/13/text3/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/13/mt_introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -187,7 +197,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/13/text3/" class="post-title-link" itemprop="url">text3</a>
+          <a href="/2025/06/13/mt_introduction/" class="post-title-link" itemprop="url">introForMT</a>
         </h2>
 
         <div class="post-meta-container">
@@ -197,8 +207,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2025-06-13 19:49:50" itemprop="dateCreated datePublished" datetime="2025-06-13T19:49:50+08:00">2025-06-13</time>
+      <time title="Created: 2025-06-13 20:05:31 / Modified: 21:22:34" itemprop="dateCreated datePublished" datetime="2025-06-13T20:05:31+08:00">2025-06-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mathematics/Measure-Theory/" itemprop="url" rel="index"><span itemprop="name">Measure Theory</span></a>
+        </span>
     </span>
 
   
@@ -211,76 +235,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
+          <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h2 id="Riemann-Integral"><a href="#Riemann-Integral" class="headerlink" title="Riemann Integral"></a>Riemann Integral</h2><h3 id="Darboux’s-Definition"><a href="#Darboux’s-Definition" class="headerlink" title="Darboux’s Definition"></a>Darboux’s Definition</h3><p>Let $\mathscr P$ be a partition of an interval $[a, b)\subseteq\mathbb R$, which is defined by ${a_i}<em>{i&#x3D;0}^k$ associated with ${x_i}</em>{i&#x3D;1}^k$ for $x_i\in[a_{i-1},a_i]$. A function $f$ is assumed to be bounded on $[a,b]$.</p>
+<ul>
+<li><code>lower sum</code>: $l(f,\mathscr P)&#x3D;\sum_{i&#x3D;1}^k \inf{f(x):x\in[a_{i-1},a_i]}\cdot (a_i-a_{i-1})$<ul>
+<li><code>lower integral</code>: $\underline{\int}<em>{a}^bf&#x3D;\sup</em>{\mathscr P}l(f,\mathscr P)$</li>
+</ul>
+</li>
+<li><code>upper sum</code>: $u(f,\mathscr P)&#x3D;\sum_{i&#x3D;1}^k \sup{f(x):x\in[a_{i-1},a_i]}\cdot (a_i-a_{i-1})$<ul>
+<li><code>upper integral</code>: $\overline{\int}<em>{a}^bf&#x3D;\inf</em>{\mathscr P}u(f,\mathscr P)$</li>
+</ul>
+</li>
+</ul>
+<p>Then, $f$ is said to be <em>Riemann Integrable</em> on $[a,b]$ if $\overline{\int}<em>{a}^bf&#x3D;\underline{\int}</em>{a}^bf$ with the <em>Riemann integral</em> of $\int_{a}^b&#x3D;\overline{\int}<em>{a}^bf&#x3D;\underline{\int}</em>{a}^bf$.</p>
+<h3 id="Riemann’s-Definition"><a href="#Riemann’s-Definition" class="headerlink" title="Riemann’s Definition"></a>Riemann’s Definition</h3><p>To start with, the <em>mesh</em> of a partition $\mathscr P$ is defined as $\Vert \mathscr P \Vert&#x3D;\max_i(a_i-a_{i-1})$.</p>
+<ul>
+<li><code>Riemann sum</code>: $\mathscr R(f,\mathscr P)&#x3D;\sum_{i&#x3D;1}^kf(x_i)(a_i-a_{i-1})$.</li>
+</ul>
+<p>Then, if there exists a number $L$ such that $\lim_{\mathscr P}\mathscr R(f,\mathscr P)&#x3D;L$ where $\Vert\mathscr P\Vert$ approaches $0$, which is equivalent to the following:</p>
+<ul>
+<li>for $\forall \varepsilon&gt;0$, there $\exist \delta&gt;0$ such that $\vert\mathscr R(f,\mathscr P)-L\vert&lt;\varepsilon$ for $\forall \Vert\mathscr P\Vert&lt;\delta$.</li>
+</ul>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/13/text2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jankos">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Unparased's Blogs">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Unparased's Blogs">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/13/text2/" class="post-title-link" itemprop="url">text2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-06-13 16:38:24 / Modified: 16:39:50" itemprop="dateCreated datePublished" datetime="2025-06-13T16:38:24+08:00">2025-06-13</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 
