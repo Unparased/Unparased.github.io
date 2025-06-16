@@ -19,24 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="article">
-<meta property="og:title" content="mt_1_1">
+    <meta name="description" content="Chapter 1.1 Algebras and Sigma-Algebras">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MT_C1_1">
 <meta property="og:url" content="https://unparased.github.io/2025/06/16/mt_C1_1/index.html">
 <meta property="og:site_name" content="Unparased&#39;s Blogs">
+<meta property="og:description" content="Chapter 1.1 Algebras and Sigma-Algebras">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-06-16T12:01:10.000Z">
-<meta property="article:modified_time" content="2025-06-16T12:01:10.910Z">
+<meta property="article:modified_time" content="2025-06-16T12:04:21.694Z">
 <meta property="article:author" content="Jankos">
+<meta property="article:tag" content="Analysis">
 <meta name="twitter:card" content="summary">
 
 
 <link rel="canonical" href="https://unparased.github.io/2025/06/16/mt_C1_1/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/06/16/mt_C1_1/","path":"2025/06/16/mt_C1_1/","title":"mt_1_1"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/06/16/mt_C1_1/","path":"2025/06/16/mt_C1_1/","title":"MT_C1_1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>mt_1_1 | Unparased's Blogs</title>
+<title>MT_C1_1 | Unparased's Blogs</title>
   
 
 
@@ -65,7 +68,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -73,7 +76,119 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -120,7 +235,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -133,6 +248,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-1.1-algebras-and-sigma-algebras"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1.1 Algebras
+and Sigma-Algebras</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,12 +318,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="mt_1_1 | Unparased's Blogs">
+      <meta itemprop="name" content="MT_C1_1 | Unparased's Blogs">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          mt_1_1
+          MT_C1_1
         </h1>
 
         <div class="post-meta-container">
@@ -216,8 +333,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2025-06-16 20:01:10" itemprop="dateCreated datePublished" datetime="2025-06-16T20:01:10+08:00">2025-06-16</time>
+      <time title="Created: 2025-06-16 20:01:10 / Modified: 20:04:21" itemprop="dateCreated datePublished" datetime="2025-06-16T20:01:10+08:00">2025-06-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mathematics/Measure-Theory/" itemprop="url" rel="index"><span itemprop="name">Measure Theory</span></a>
+        </span>
     </span>
 
   
@@ -229,7 +360,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h1 id="chapter-1.1-algebras-and-sigma-algebras">Chapter 1.1 Algebras
+and Sigma-Algebras</h1>
 
     </div>
 
@@ -238,13 +370,16 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Analysis/" rel="tag"># Analysis</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/06/13/mt_C0_introduction/" rel="prev" title="mt_introduction">
-                  <i class="fa fa-angle-left"></i> mt_introduction
+                <a href="/2025/06/13/mt_C0_introduction/" rel="prev" title="MT_C0_Introduction">
+                  <i class="fa fa-angle-left"></i> MT_C0_Introduction
                 </a>
             </div>
             <div class="post-nav-item">
