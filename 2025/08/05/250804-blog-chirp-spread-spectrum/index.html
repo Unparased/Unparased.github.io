@@ -28,8 +28,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unparased.github.io/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250806151641551.png">
 <meta property="og:image" content="https://unparased.github.io/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250806151910652.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250809171837847.png">
 <meta property="article:published_time" content="2025-08-05T15:04:40.000Z">
-<meta property="article:modified_time" content="2025-08-08T16:17:36.608Z">
+<meta property="article:modified_time" content="2025-08-09T09:58:15.934Z">
 <meta property="article:author" content="Jankos">
 <meta property="article:tag" content="Paper notes">
 <meta name="twitter:card" content="summary">
@@ -271,7 +272,10 @@ Communication System</span></a></li><li class="nav-item nav-level-2"><a class="n
 Non-Coherent Distributed Transmission with Chirp Spread Spectrum
 Modulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-16---sustainable-fishing-chirp-based-signals-for-underwater-acoustic-communication-and-localization"><span class="nav-number">10.</span> <span class="nav-text">Paper 16 -
 Sustainable Fishing: Chirp-Based Signals for Underwater Acoustic
-Communication and Localization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#frame-design"><span class="nav-number">10.1.</span> <span class="nav-text">Frame Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#receiver"><span class="nav-number">10.2.</span> <span class="nav-text">Receiver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#detection"><span class="nav-number">10.2.1.</span> <span class="nav-text">Detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doppler-estimation-frft"><span class="nav-number">10.2.2.</span> <span class="nav-text">Doppler Estimation (FrFT)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doppler-compensation"><span class="nav-number">10.2.3.</span> <span class="nav-text">Doppler Compensation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronization"><span class="nav-number">10.2.4.</span> <span class="nav-text">Synchronization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#channel-estimation"><span class="nav-number">10.2.5.</span> <span class="nav-text">Channel Estimation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#channel-equalization"><span class="nav-number">10.2.6.</span> <span class="nav-text">Channel Equalization</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localization"><span class="nav-number">10.3.</span> <span class="nav-text">Localization</span></a></li></ol></li></ol></div>
+Communication and Localization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#frame-design"><span class="nav-number">10.1.</span> <span class="nav-text">Frame Design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#receiver"><span class="nav-number">10.2.</span> <span class="nav-text">Receiver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#detection"><span class="nav-number">10.2.1.</span> <span class="nav-text">Detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doppler-estimation-frft"><span class="nav-number">10.2.2.</span> <span class="nav-text">Doppler Estimation (FrFT)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doppler-compensation"><span class="nav-number">10.2.3.</span> <span class="nav-text">Doppler Compensation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronization"><span class="nav-number">10.2.4.</span> <span class="nav-text">Synchronization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#channel-estimation"><span class="nav-number">10.2.5.</span> <span class="nav-text">Channel Estimation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#channel-equalization"><span class="nav-number">10.2.6.</span> <span class="nav-text">Channel Equalization</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localization"><span class="nav-number">10.3.</span> <span class="nav-text">Localization</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-17---trellis-coded-chirp-spread-spectrum-modulation-for-massive-machine-type-communications"><span class="nav-number">11.</span> <span class="nav-text">Paper 17 - Trellis
+Coded Chirp Spread Spectrum Modulation for Massive Machine Type
+Communications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#non-coded-css-multiple-users"><span class="nav-number">11.1.</span> <span class="nav-text">Non-coded CSS (Multiple
+Users)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trellis-coded-css"><span class="nav-number">11.2.</span> <span class="nav-text">Trellis coded CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tcm-css"><span class="nav-number">11.2.1.</span> <span class="nav-text">TCM-CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#demodulation"><span class="nav-number">11.2.2.</span> <span class="nav-text">Demodulation</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -284,13 +288,13 @@ Communication and Localization</span></a><ol class="nav-child"><li class="nav-it
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -363,7 +367,7 @@ Communication and Localization</span></a><ol class="nav-child"><li class="nav-it
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-08-09 00:17:36" itemprop="dateModified" datetime="2025-08-09T00:17:36+08:00">2025-08-09</time>
+      <time title="Modified: 2025-08-09 17:58:15" itemprop="dateModified" datetime="2025-08-09T17:58:15+08:00">2025-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -510,6 +514,39 @@ down-chirps <strong>conventionally</strong>, followed by
 <p>The channel is equalized by using MMSE <code>[18]</code>.</p>
 <h3 id="localization">Localization</h3>
 <p><code>This parts estimate the TDOA, which is not what my interests are located in so that neglected.</code></p>
+<h2 id="paper-17---trellis-coded-chirp-spread-spectrum-modulation-for-massive-machine-type-communications"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10978516">Paper 17 - Trellis
+Coded Chirp Spread Spectrum Modulation for Massive Machine Type
+Communications</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focuses on the Trellis Coded Modulation (TCM) based CSS system with single-user and multi-user scenarios.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="non-coded-css-multiple-users">Non-coded CSS (Multiple
+Users)</h3>
+<p>In such a case, the channel coefficient has been acquired so that we
+can use the <strong>complex conjugate form</strong> to
+<code>coherently detect</code> the signal components. Then, the
+corresponding component is <em>removed successively</em>.
+(<code>SIC criterion</code>)</p>
+<p>It is worth pointing out that the case with limited number of
+antennas at the receiver in which the <strong>ambiguities</strong>
+cannot be resolved well. <em>Some solutions</em> have been proposed like
+<strong>heuristics methods</strong> <code>[6]-[9]</code> or
+<strong>cross entropy method</strong> <code>[7],[8]</code>.</p>
+<h3 id="trellis-coded-css">Trellis coded CSS</h3>
+<h4 id="tcm-css">TCM-CSS</h4>
+<p>For the bit sequence <span class="math inline"><strong>b</strong> = (<em>b</em><sub>0</sub>, …, <em>b</em><sub><em>S</em><em>F</em> − 2</sub>)</span>,
+the first bit <span class="math inline"><em>b</em><sub>0</sub></span> is
+encoded by a convolution code of rate <span class="math inline">1/2</span>, followed by a Gray coding mapped to
+<span class="math inline"><em>c</em> ∈ {0, 1, 2, 3}</span>. The
+remaining <span class="math inline"><em>S</em><em>F</em> − 2</span> bits
+are mapped based on Gray coding to <span class="math inline"><em>u</em> ∈ {0, …, 2<sup><em>S</em><em>F</em> − 2</sup> − 1}</span>.
+The corresponding symbol is <span class="math inline"><em>k</em> = 4<em>u</em> + <em>c</em></span>.</p>
+<h4 id="demodulation">Demodulation</h4>
+<p>The log-likelihood ratio is employed as</p>
+<figure>
+<img src="/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250809171837847.png" alt="LLR for TCM-CSS">
+<figcaption aria-hidden="true">LLR for TCM-CSS</figcaption>
+</figure>
+<p>Then, a <strong>Viterbi decoder</strong> is employed to enhance the
+performance.</p>
 
     </div>
 
