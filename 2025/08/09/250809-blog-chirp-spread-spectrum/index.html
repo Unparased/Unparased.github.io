@@ -26,11 +26,15 @@
 <meta property="og:site_name" content="Unparased&#39;s Blogs">
 <meta property="og:description" content="Cont. Paper 18 - A Deep Learning-Based CSS Modulation for NLOS Visible Light Communications 123&#39;&#39;&#39;	This paper emphasizes the employment of CSS within the visible light communication (VLC) NLOS sce">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://unparased.github.io/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810121729461.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810122538675.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810122638705.png">
 <meta property="article:published_time" content="2025-08-09T09:59:03.000Z">
-<meta property="article:modified_time" content="2025-08-09T12:52:23.052Z">
+<meta property="article:modified_time" content="2025-08-11T15:16:43.910Z">
 <meta property="article:author" content="Jankos">
 <meta property="article:tag" content="Paper notes">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unparased.github.io/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810121729461.png">
 
 
 <link rel="canonical" href="https://unparased.github.io/2025/08/09/250809-blog-chirp-spread-spectrum/">
@@ -255,7 +259,8 @@ on signals for LEO-PNT beyond GNSS</span></a></li><li class="nav-item nav-level-
 Estimation for Multiple-Input Multiple-Output Orthogonal Chirp-Division
 Multiplexing Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-21---dual-chirps-direction-shift-keying-modulation"><span class="nav-number">4.</span> <span class="nav-text">Paper 21 - Dual
 Chirps Direction Shift Keying Modulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-22---dual-mode-time-domain-multiplexed-chirp-spread-spectrum"><span class="nav-number">5.</span> <span class="nav-text">Paper 22 -
-Dual-Mode Time Domain Multiplexed Chirp Spread Spectrum</span></a></li></ol></div>
+Dual-Mode Time Domain Multiplexed Chirp Spread Spectrum</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#channel-model"><span class="nav-number">5.1.</span> <span class="nav-text">Channel Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#signal-model"><span class="nav-number">5.2.</span> <span class="nav-text">Signal Model</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-22---layered-chirp-spread-spectrum-modulations-for-lpwans"><span class="nav-number">6.</span> <span class="nav-text">Paper 22 - Layered
+Chirp Spread Spectrum Modulations for LPWANs</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -274,7 +279,7 @@ Dual-Mode Time Domain Multiplexed Chirp Spread Spectrum</span></a></li></ol></di
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -339,9 +344,15 @@ Dual-Mode Time Domain Multiplexed Chirp Spread Spectrum</span></a></li></ol></di
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-08-09 17:59:03 / Modified: 20:52:23" itemprop="dateCreated datePublished" datetime="2025-08-09T17:59:03+08:00">2025-08-09</time>
+      <time title="Created: 2025-08-09 17:59:03" itemprop="dateCreated datePublished" datetime="2025-08-09T17:59:03+08:00">2025-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-08-11 23:16:43" itemprop="dateModified" datetime="2025-08-11T23:16:43+08:00">2025-08-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -353,7 +364,7 @@ Dual-Mode Time Domain Multiplexed Chirp Spread Spectrum</span></a></li></ol></di
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Communications/Chirp-Spread-Spectrum/" itemprop="url" rel="index"><span itemprop="name">Chirp Spread Spectrum</span></a>
+          <a href="/categories/Communications/Chirp-Spread-Spectrum-CSS/" itemprop="url" rel="index"><span itemprop="name">Chirp Spread Spectrum (CSS)</span></a>
         </span>
     </span>
 
@@ -387,6 +398,46 @@ be given by <span class="math display"><mjx-container class="MathJax" jax="SVG" 
 <code>neglected</code> here.</p>
 <h2 id="paper-22---dual-mode-time-domain-multiplexed-chirp-spread-spectrum"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10183362">Paper 22 -
 Dual-Mode Time Domain Multiplexed Chirp Spread Spectrum</a></h2>
+<h3 id="channel-model">Channel Model</h3>
+<p><span class="math display"><em>y</em>(<em>n</em>) = <em>h</em><em>x</em>(<em>n</em>) + <em>w</em>(<em>n</em>)</span></p>
+<p>where <span class="math inline"><em>h</em></span> is the complex
+channel gain, and <span class="math inline"><em>w</em>(<em>n</em>)</span> is the complex
+noise.</p>
+<h3 id="signal-model">Signal Model</h3>
+<p>The <code>DM-TDM-CSS</code> employs the following technique:</p>
+<figure>
+<img src="/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810121729461.png" alt="FIG DM-TDM-CSS">
+<figcaption aria-hidden="true">FIG DM-TDM-CSS</figcaption>
+</figure>
+<p>The <span class="math inline"><em>S</em><em>F</em> − 1</span> bits
+are mapped to <strong>odd or even numbers</strong>, followed by the CSS
+modulation. Then, the <code>TDM</code> scheme is utilized to allow
+up-chirps and down-chirps are superimposed.</p>
+<p>The coherent detection and non-coherent detection are involved.
+(<code>neglected</code>)</p>
+<p>Afterwards, the <strong>orthogonality</strong> and
+<strong>interference</strong> are analyzed.</p>
+<h2 id="paper-22---layered-chirp-spread-spectrum-modulations-for-lpwans"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10312745">Paper 22 - Layered
+Chirp Spread Spectrum Modulations for LPWANs</a></h2>
+<p>The diagram of how <code>LCSS</code> is employed is illustrated as
+follows:</p>
+<figure>
+<img src="/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810122538675.png" alt="FIG LCSS">
+<figcaption aria-hidden="true">FIG LCSS</figcaption>
+</figure>
+<p>where different chirp rates are employed. Then, the corresponding
+coherent detection and non-coherent detection are both considered.</p>
+<p>Then, its extended version referred to as <code>LDMCSS</code> is
+involved as follows:</p>
+<figure>
+<img src="/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810122638705.png" alt="FIG LDMCSS">
+<figcaption aria-hidden="true">FIG LDMCSS</figcaption>
+</figure>
+<p>where the <code>DM</code> technique is employed. Then, the
+<strong>coherent and non-coherent detections</strong> are utilized,
+followed by <strong>orthogonality and interference analysis</strong>.
+Afterwards, the <strong>BER approximation</strong> is provided.</p>
+<p>Paper 23 -</p>
 
     </div>
 
