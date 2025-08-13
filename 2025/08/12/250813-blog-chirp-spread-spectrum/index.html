@@ -19,27 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="Chapter 1.4 Lebesgue Measure">
+    <meta name="description" content="cont. Paper 28 - A Frequency Division Modulation for CSS-based Communication Systems: An Initial Discussion 123&#39;&#39;&#39;	This paper focused on the MCT transform which seems like OFDMA using OCDM.&#39;&#39;&#39; Pa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MT C1.4 Lebesgue Measure">
-<meta property="og:url" content="https://unparased.github.io/2025/08/06/mt_C1_4/index.html">
+<meta property="og:title" content="Comm. CSS - part 06">
+<meta property="og:url" content="https://unparased.github.io/2025/08/12/250813-blog-chirp-spread-spectrum/index.html">
 <meta property="og:site_name" content="Unparased&#39;s Blogs">
-<meta property="og:description" content="Chapter 1.4 Lebesgue Measure">
+<meta property="og:description" content="cont. Paper 28 - A Frequency Division Modulation for CSS-based Communication Systems: An Initial Discussion 123&#39;&#39;&#39;	This paper focused on the MCT transform which seems like OFDMA using OCDM.&#39;&#39;&#39; Pa">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-08-06T15:59:49.000Z">
-<meta property="article:modified_time" content="2025-08-06T16:01:03.204Z">
+<meta property="article:published_time" content="2025-08-12T14:53:12.000Z">
+<meta property="article:modified_time" content="2025-08-13T13:24:00.961Z">
 <meta property="article:author" content="Jankos">
-<meta property="article:tag" content="Analysis">
+<meta property="article:tag" content="Paper notes">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://unparased.github.io/2025/08/06/mt_C1_4/">
+<link rel="canonical" href="https://unparased.github.io/2025/08/12/250813-blog-chirp-spread-spectrum/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/08/06/mt_C1_4/","path":"2025/08/06/mt_C1_4/","title":"MT C1.4 Lebesgue Measure"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/08/12/250813-blog-chirp-spread-spectrum/","path":"2025/08/12/250813-blog-chirp-spread-spectrum/","title":"Comm. CSS - part 06"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>MT C1.4 Lebesgue Measure | Unparased's Blogs</title>
+<title>Comm. CSS - part 06 | Unparased's Blogs</title>
   
 
 
@@ -248,7 +248,14 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#chapter-1.4-lebesgue-measure"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1.4 Lebesgue Measure</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-28---a-frequency-division-modulation-for-css-based-communication-systems-an-initial-discussion"><span class="nav-number">1.</span> <span class="nav-text">Paper 28 - A
+Frequency Division Modulation for CSS-based Communication Systems: An
+Initial Discussion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-29---bic-lora-bits-in-chirp-shapes-to-boost-throughput-in-lora"><span class="nav-number">2.</span> <span class="nav-text">Paper 29 -
+BIC-LoRa: Bits in Chirp Shapes to Boost Throughput in LoRa</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-30---ga-crsk-gradient-ascent-chirp-rate-shift-keying-for-high-data-rate-lora-communications"><span class="nav-number">3.</span> <span class="nav-text">Paper 30 - GA-CRSK:
+Gradient Ascent Chirp Rate Shift Keying for High Data-Rate LoRa
+Communications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-31---orthogonal-chirp-division-multiplexing-with-index-modulation"><span class="nav-number">4.</span> <span class="nav-text">Paper 31 -
+Orthogonal Chirp Division Multiplexing With Index Modulation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#im"><span class="nav-number">4.1.</span> <span class="nav-text">IM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#analysis"><span class="nav-number">4.2.</span> <span class="nav-text">Analysis</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-32---spreading-factor-recovery-in-lora-using-machine-learning"><span class="nav-number">5.</span> <span class="nav-text">Paper 32 -
+Spreading Factor Recovery in LoRa Using Machine Learning</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -304,7 +311,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/06/mt_C1_4/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/12/250813-blog-chirp-spread-spectrum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -317,12 +324,12 @@ mjx-container[display="true"] + br {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="MT C1.4 Lebesgue Measure | Unparased's Blogs">
+      <meta itemprop="name" content="Comm. CSS - part 06 | Unparased's Blogs">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MT C1.4 Lebesgue Measure
+          Comm. CSS - part 06
         </h1>
 
         <div class="post-meta-container">
@@ -333,14 +340,14 @@ mjx-container[display="true"] + br {
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2025-08-06 23:59:49" itemprop="dateCreated datePublished" datetime="2025-08-06T23:59:49+08:00">2025-08-06</time>
+      <time title="Created: 2025-08-12 22:53:12" itemprop="dateCreated datePublished" datetime="2025-08-12T22:53:12+08:00">2025-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-08-07 00:01:03" itemprop="dateModified" datetime="2025-08-07T00:01:03+08:00">2025-08-07</time>
+      <time title="Modified: 2025-08-13 21:24:00" itemprop="dateModified" datetime="2025-08-13T21:24:00+08:00">2025-08-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -348,11 +355,11 @@ mjx-container[display="true"] + br {
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+          <a href="/categories/Communications/" itemprop="url" rel="index"><span itemprop="name">Communications</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mathematics/Measure-Theory/" itemprop="url" rel="index"><span itemprop="name">Measure Theory</span></a>
+          <a href="/categories/Communications/Chirp-Spread-Spectrum-CSS/" itemprop="url" rel="index"><span itemprop="name">Chirp Spread Spectrum (CSS)</span></a>
         </span>
     </span>
 
@@ -365,7 +372,46 @@ mjx-container[display="true"] + br {
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="chapter-1.4-lebesgue-measure">Chapter 1.4 Lebesgue Measure</h2>
+    <div class="post-body" itemprop="articleBody"><p><code>cont.</code></p>
+<h2 id="paper-28---a-frequency-division-modulation-for-css-based-communication-systems-an-initial-discussion"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10390373">Paper 28 - A
+Frequency Division Modulation for CSS-based Communication Systems: An
+Initial Discussion</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the MCT transform which seems like OFDMA using OCDM.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-29---bic-lora-bits-in-chirp-shapes-to-boost-throughput-in-lora"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10577420">Paper 29 -
+BIC-LoRa: Bits in Chirp Shapes to Boost Throughput in LoRa</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the employment of non-linear chirp.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>Assume the set including non-linear chirps is denoted by <span class="math inline">𝒳</span>, the extra bit for transmission is <span class="math inline">log 𝒳</span> bits. However, the
+<code>quasi-orthogonality</code> renders the infeasibility to acquire
+the infinite chirps.</p>
+<p>Then, the packet collision was considered to examine the resilience.
+The time difference features the collision, where the difference remains
+to be a constant within these packets. Hence, the detection can be
+directly applied by using the <strong>correlation</strong> with or
+without <em>temporal deviation</em>.</p>
+<h2 id="paper-30---ga-crsk-gradient-ascent-chirp-rate-shift-keying-for-high-data-rate-lora-communications"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10794377">Paper 30 - GA-CRSK:
+Gradient Ascent Chirp Rate Shift Keying for High Data-Rate LoRa
+Communications</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper foccused on the the (chirp rate shift keying) CRSK.</span></span><br><span class="line"><span class="string">	Besides, extra bits are used to select a chirp rate.</span></span><br><span class="line"><span class="string">	To decode the chirp rate and symbols, the gradient ascent algorithm was considered using DCFT function.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-31---orthogonal-chirp-division-multiplexing-with-index-modulation"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10461994">Paper 31 -
+Orthogonal Chirp Division Multiplexing With Index Modulation</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the OCDM associated with IM.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="im">IM</h3>
+<p>Within <span class="math inline"><em>n</em><sub><em>c</em></sub></span> antennas,
+<span class="math inline"><em>k</em></span> antennas are selected such
+that <span class="math inline">⌊log C<sub><em>n</em><sub><em>r</em></sub></sub><sup><em>k</em></sup>⌋</span>
+bits are transmitted.</p>
+<p>Then, the OCDM-IM considered the detector built on the
+<code>channel matrix</code>.</p>
+<h3 id="analysis">Analysis</h3>
+<ul>
+<li><p><code>Peak-to-Average Power Ratio (PAPR)</code></p></li>
+<li><p><code>Average Bit Error Rate</code></p></li>
+<li><p><code>Minimum Euclidean Distance</code></p></li>
+<li><p><code>Multipath Diversity</code></p></li>
+</ul>
+<h2 id="paper-32---spreading-factor-recovery-in-lora-using-machine-learning"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10188752">Paper 32 -
+Spreading Factor Recovery in LoRa Using Machine Learning</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the separation of different SFs.</span></span><br><span class="line"><span class="string">	The employed algorithms are SVM and KNN.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -375,20 +421,20 @@ mjx-container[display="true"] + br {
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Analysis/" rel="tag"># Analysis</a>
+              <a href="/tags/Paper-notes/" rel="tag"># Paper notes</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/08/05/250804-blog-chirp-spread-spectrum/" rel="prev" title="Comm. CSS - part 03">
-                  <i class="fa fa-angle-left"></i> Comm. CSS - part 03
+                <a href="/2025/08/12/250812-blog-chirp-spread-spectrum/" rel="prev" title="Comm. CSS - part 05">
+                  <i class="fa fa-angle-left"></i> Comm. CSS - part 05
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/08/09/250809-blog-chirp-spread-spectrum/" rel="next" title="Comm. CSS - part 04">
-                  Comm. CSS - part 04 <i class="fa fa-angle-right"></i>
+                <a href="/2025/08/13/250814-blog-chirp-spread-spectrum/" rel="next" title="Comm. CSS - part 07">
+                  Comm. CSS - part 07 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
