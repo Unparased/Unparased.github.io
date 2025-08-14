@@ -325,9 +325,15 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-08-13 21:24:35 / Modified: 21:25:51" itemprop="dateCreated datePublished" datetime="2025-08-13T21:24:35+08:00">2025-08-13</time>
+      <time title="Created: 2025-08-13 21:24:35" itemprop="dateCreated datePublished" datetime="2025-08-13T21:24:35+08:00">2025-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-08-14 21:33:07" itemprop="dateModified" datetime="2025-08-14T21:33:07+08:00">2025-08-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -354,7 +360,44 @@ mjx-container[display="true"] + br {
     
     <div class="post-body" itemprop="articleBody">
           <p><code>cont.</code></p>
-<p><a href>Paper 33 -</a></p>
+<h2 id="paper-33---a-new-index-modulation-for-lora"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10029350">Paper 33 - A New
+Index Modulation for LoRa</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper investigated the IM with each antennas connecting different SFs.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>The transmitted signal is the superimposed signal from different
+<code>SFs</code>. The transmission model is given by <span class="math display"><strong>y</strong> = <em>h</em><strong>x</strong> + <strong>w</strong></span>
+where <span class="math inline"><em>h</em> ∈ ℂ</span> is the channel
+gain.</p>
+<p>The detection algorithm is separately based on the
+<strong>non-coherent and coherent detections</strong>.</p>
+<h2 id="paper-34---an-index-modulated-fscm-systems-with-low-complexity-algorithm-and-enhanced-data-rate"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10439041">Paper 34 - An
+index-modulated FSCM systems with low complexity algorithm and enhanced
+data rate</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper considered the FSCM, FSCSS_IM, and ICSS_IM, the enhanced FSCSS_IM.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="fscss_im">FSCSS_IM</h3>
+<p>This waveform utilized the superimposed form by concurrently
+transmitting the symbols <span class="math inline">{<em>f</em><sub>1</sub>, <em>f</em><sub>2</sub>}</span>
+with <span class="math inline"><em>f</em><sub>1</sub> &lt; <em>f</em><sub>2</sub></span>,
+implying <span class="math inline">⌊log C<sub><em>M</em></sub><sup>2</sup>⌋</span>
+bits.</p>
+<h3 id="icss_im">ICSS_IM</h3>
+<p>This waveform is the enhanced version of <code>FSCSS_IM</code>, with
+<span class="math inline"><em>f</em><sub>1</sub> ≤ <em>f</em><sub>2</sub></span>.</p>
+<h4 id="detection">Detection</h4>
+<p>The detection relies on the <code>DFT output</code> of the received
+signal in the descending order, in which the difference between <span class="math inline"><em>Y</em>(1) − <em>Y</em>(2)</span> and <span class="math inline"><em>Y</em>(2) − <em>Y</em>(3)</span> is compared
+using a threshold <span class="math inline"><em>T</em></span>.</p>
+<p>For a multi-path case, the matched filter <code>[7]</code> was
+employed as follows: <code>(which I do not think it holds)</code></p>
+<figure>
+<img src="/2025/08/13/250814-blog-chirp-spread-spectrum/image-20250814210138656.png" alt="image-20250814210138656">
+<figcaption aria-hidden="true">image-20250814210138656</figcaption>
+</figure>
+<h2 id="paper-35---coexistence-of-chirp-spread-waveforms-and-ofdm-over-a-single-frequency-band"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10827809">Paper 35 -
+Coexistence of Chirp-Spread Waveforms and OFDM over a Single Frequency
+Band</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper considered the coexistence of OCDM-like signal coexisting with OFDM, in which the transmitted bits are composed of two parts.</span></span><br><span class="line"><span class="string">	The first part is mapped to the QAMs, followed by DFnT and IFFT.</span></span><br><span class="line"><span class="string">	The second part is directly mapped to QAMs, followed by IFFT, so that they can be transmitted concurrently.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-36---message-passing-receiver-for-ocdm-in-vehicular-communications-and-networks"><a href>Paper 36 - Message-Passing Receiver for OCDM in Vehicular
+Communications and Networks</a></h2>
 
       
     </div>

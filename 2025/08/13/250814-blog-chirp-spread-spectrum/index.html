@@ -19,18 +19,20 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="cont. Paper 33 -">
+    <meta name="description" content="cont. Paper 33 - A New Index Modulation for LoRa 123&#39;&#39;&#39;	This paper investigated the IM with each antennas connecting different SFs.&#39;&#39;&#39; The transmitted signal is the superimposed signal from differ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Comm. CSS - part 07">
 <meta property="og:url" content="https://unparased.github.io/2025/08/13/250814-blog-chirp-spread-spectrum/index.html">
 <meta property="og:site_name" content="Unparased&#39;s Blogs">
-<meta property="og:description" content="cont. Paper 33 -">
+<meta property="og:description" content="cont. Paper 33 - A New Index Modulation for LoRa 123&#39;&#39;&#39;	This paper investigated the IM with each antennas connecting different SFs.&#39;&#39;&#39; The transmitted signal is the superimposed signal from differ">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://unparased.github.io/2025/08/13/250814-blog-chirp-spread-spectrum/image-20250814210138656.png">
 <meta property="article:published_time" content="2025-08-13T13:24:35.000Z">
-<meta property="article:modified_time" content="2025-08-13T13:25:51.608Z">
+<meta property="article:modified_time" content="2025-08-14T13:33:07.345Z">
 <meta property="article:author" content="Jankos">
 <meta property="article:tag" content="Paper notes">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unparased.github.io/2025/08/13/250814-blog-chirp-spread-spectrum/image-20250814210138656.png">
 
 
 <link rel="canonical" href="https://unparased.github.io/2025/08/13/250814-blog-chirp-spread-spectrum/">
@@ -235,7 +237,7 @@ mjx-container[display="true"] + br {
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -248,6 +250,13 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-33---a-new-index-modulation-for-lora"><span class="nav-number">1.</span> <span class="nav-text">Paper 33 - A New
+Index Modulation for LoRa</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-34---an-index-modulated-fscm-systems-with-low-complexity-algorithm-and-enhanced-data-rate"><span class="nav-number">2.</span> <span class="nav-text">Paper 34 - An
+index-modulated FSCM systems with low complexity algorithm and enhanced
+data rate</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fscss_im"><span class="nav-number">2.1.</span> <span class="nav-text">FSCSS_IM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#icss_im"><span class="nav-number">2.2.</span> <span class="nav-text">ICSS_IM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#detection"><span class="nav-number">2.2.1.</span> <span class="nav-text">Detection</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-35---coexistence-of-chirp-spread-waveforms-and-ofdm-over-a-single-frequency-band"><span class="nav-number">3.</span> <span class="nav-text">Paper 35 -
+Coexistence of Chirp-Spread Waveforms and OFDM over a Single Frequency
+Band</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-36---message-passing-receiver-for-ocdm-in-vehicular-communications-and-networks"><span class="nav-number">4.</span> <span class="nav-text">Paper 36 - Message-Passing Receiver for OCDM in Vehicular
+Communications and Networks</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -331,9 +340,15 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-08-13 21:24:35 / Modified: 21:25:51" itemprop="dateCreated datePublished" datetime="2025-08-13T21:24:35+08:00">2025-08-13</time>
+      <time title="Created: 2025-08-13 21:24:35" itemprop="dateCreated datePublished" datetime="2025-08-13T21:24:35+08:00">2025-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-08-14 21:33:07" itemprop="dateModified" datetime="2025-08-14T21:33:07+08:00">2025-08-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -359,7 +374,44 @@ mjx-container[display="true"] + br {
     
     
     <div class="post-body" itemprop="articleBody"><p><code>cont.</code></p>
-<p><a href>Paper 33 -</a></p>
+<h2 id="paper-33---a-new-index-modulation-for-lora"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10029350">Paper 33 - A New
+Index Modulation for LoRa</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper investigated the IM with each antennas connecting different SFs.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>The transmitted signal is the superimposed signal from different
+<code>SFs</code>. The transmission model is given by <span class="math display"><strong>y</strong> = <em>h</em><strong>x</strong> + <strong>w</strong></span>
+where <span class="math inline"><em>h</em> ∈ ℂ</span> is the channel
+gain.</p>
+<p>The detection algorithm is separately based on the
+<strong>non-coherent and coherent detections</strong>.</p>
+<h2 id="paper-34---an-index-modulated-fscm-systems-with-low-complexity-algorithm-and-enhanced-data-rate"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10439041">Paper 34 - An
+index-modulated FSCM systems with low complexity algorithm and enhanced
+data rate</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper considered the FSCM, FSCSS_IM, and ICSS_IM, the enhanced FSCSS_IM.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="fscss_im">FSCSS_IM</h3>
+<p>This waveform utilized the superimposed form by concurrently
+transmitting the symbols <span class="math inline">{<em>f</em><sub>1</sub>, <em>f</em><sub>2</sub>}</span>
+with <span class="math inline"><em>f</em><sub>1</sub> &lt; <em>f</em><sub>2</sub></span>,
+implying <span class="math inline">⌊log C<sub><em>M</em></sub><sup>2</sup>⌋</span>
+bits.</p>
+<h3 id="icss_im">ICSS_IM</h3>
+<p>This waveform is the enhanced version of <code>FSCSS_IM</code>, with
+<span class="math inline"><em>f</em><sub>1</sub> ≤ <em>f</em><sub>2</sub></span>.</p>
+<h4 id="detection">Detection</h4>
+<p>The detection relies on the <code>DFT output</code> of the received
+signal in the descending order, in which the difference between <span class="math inline"><em>Y</em>(1) − <em>Y</em>(2)</span> and <span class="math inline"><em>Y</em>(2) − <em>Y</em>(3)</span> is compared
+using a threshold <span class="math inline"><em>T</em></span>.</p>
+<p>For a multi-path case, the matched filter <code>[7]</code> was
+employed as follows: <code>(which I do not think it holds)</code></p>
+<figure>
+<img src="/2025/08/13/250814-blog-chirp-spread-spectrum/image-20250814210138656.png" alt="image-20250814210138656">
+<figcaption aria-hidden="true">image-20250814210138656</figcaption>
+</figure>
+<h2 id="paper-35---coexistence-of-chirp-spread-waveforms-and-ofdm-over-a-single-frequency-band"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10827809">Paper 35 -
+Coexistence of Chirp-Spread Waveforms and OFDM over a Single Frequency
+Band</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper considered the coexistence of OCDM-like signal coexisting with OFDM, in which the transmitted bits are composed of two parts.</span></span><br><span class="line"><span class="string">	The first part is mapped to the QAMs, followed by DFnT and IFFT.</span></span><br><span class="line"><span class="string">	The second part is directly mapped to QAMs, followed by IFFT, so that they can be transmitted concurrently.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-36---message-passing-receiver-for-ocdm-in-vehicular-communications-and-networks"><a href>Paper 36 - Message-Passing Receiver for OCDM in Vehicular
+Communications and Networks</a></h2>
 
     </div>
 
