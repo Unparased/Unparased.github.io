@@ -19,27 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="Chapter 1.4 Lebesgue Measure">
+    <meta name="description" content="Normed Space Definition 1 - A vector space V over a field 𝕂 (especially, ℝ or ℂ) is a set of vectors which comes with an addition + : V × V → V and scalar multiplication ⋅ : 𝕂 × V → V, along w">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MT C1.4 Lebesgue Measure">
-<meta property="og:url" content="https://unparased.github.io/2025/08/06/mt_C1_4/index.html">
+<meta property="og:title" content="FA Lecture 01">
+<meta property="og:url" content="https://unparased.github.io/2025/08/22/FA-Lec01/index.html">
 <meta property="og:site_name" content="Unparased&#39;s Blogs">
-<meta property="og:description" content="Chapter 1.4 Lebesgue Measure">
+<meta property="og:description" content="Normed Space Definition 1 - A vector space V over a field 𝕂 (especially, ℝ or ℂ) is a set of vectors which comes with an addition + : V × V → V and scalar multiplication ⋅ : 𝕂 × V → V, along w">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-08-06T15:59:49.000Z">
-<meta property="article:modified_time" content="2025-08-06T16:01:03.204Z">
+<meta property="article:published_time" content="2025-08-22T11:06:42.000Z">
+<meta property="article:modified_time" content="2025-08-22T15:03:49.286Z">
 <meta property="article:author" content="Jankos">
 <meta property="article:tag" content="Analysis">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://unparased.github.io/2025/08/06/mt_C1_4/">
+<link rel="canonical" href="https://unparased.github.io/2025/08/22/FA-Lec01/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/08/06/mt_C1_4/","path":"2025/08/06/mt_C1_4/","title":"MT C1.4 Lebesgue Measure"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/08/22/FA-Lec01/","path":"2025/08/22/FA-Lec01/","title":"FA Lecture 01"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>MT C1.4 Lebesgue Measure | Unparased's Blogs</title>
+<title>FA Lecture 01 | Unparased's Blogs</title>
   
 
 
@@ -68,7 +68,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -76,119 +76,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -248,7 +136,7 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#chapter-1.4-lebesgue-measure"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1.4 Lebesgue Measure</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#normed-space"><span class="nav-number">1.</span> <span class="nav-text">Normed Space</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axioms"><span class="nav-number">1.1.</span> <span class="nav-text">Axioms</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#examples"><span class="nav-number">1.2.</span> <span class="nav-text">Examples</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -304,7 +192,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/06/mt_C1_4/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/22/FA-Lec01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -317,12 +205,12 @@ mjx-container[display="true"] + br {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="MT C1.4 Lebesgue Measure | Unparased's Blogs">
+      <meta itemprop="name" content="FA Lecture 01 | Unparased's Blogs">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MT C1.4 Lebesgue Measure
+          FA Lecture 01
         </h1>
 
         <div class="post-meta-container">
@@ -332,15 +220,9 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2025-08-06 23:59:49" itemprop="dateCreated datePublished" datetime="2025-08-06T23:59:49+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-08-07 00:01:03" itemprop="dateModified" datetime="2025-08-07T00:01:03+08:00">2025-08-07</time>
+      <time title="Created: 2025-08-22 19:06:42 / Modified: 23:03:49" itemprop="dateCreated datePublished" datetime="2025-08-22T19:06:42+08:00">2025-08-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -352,7 +234,7 @@ mjx-container[display="true"] + br {
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mathematics/Measure-Theory/" itemprop="url" rel="index"><span itemprop="name">Measure Theory</span></a>
+          <a href="/categories/Mathematics/Functional-Analysis/" itemprop="url" rel="index"><span itemprop="name">Functional Analysis</span></a>
         </span>
     </span>
 
@@ -365,7 +247,70 @@ mjx-container[display="true"] + br {
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="chapter-1.4-lebesgue-measure">Chapter 1.4 Lebesgue Measure</h2>
+    <div class="post-body" itemprop="articleBody"><h3 id="normed-space">Normed Space</h3>
+<p><strong><em>Definition 1</em></strong> - A <strong>vector
+space</strong> <span class="math inline"><em>V</em></span> over a
+<strong>field</strong> <span class="math inline">𝕂</span> (especially,
+<span class="math inline">ℝ</span> or <span class="math inline">ℂ</span>) is a set of vectors which comes with an
+<strong>addition</strong> <span class="math inline">+ : <em>V</em> × <em>V</em> → <em>V</em></span> and
+<strong>scalar multiplication</strong> <span class="math inline">⋅ : 𝕂 × <em>V</em> → <em>V</em></span>, along with
+some axioms: <em>Commutativity, Associativity, Identity, and inverse of
+addition, identity of multiplication, and distributivity</em>.</p>
+<h4 id="axioms">Axioms</h4>
+<ul>
+<li><strong>Associativity</strong> of vector addition: <span class="math inline"><strong>u</strong> + (<strong>v</strong> + <strong>w</strong>) = <strong>u</strong> + <strong>v</strong> + <strong>w</strong></span>.</li>
+<li><strong>Commutativity</strong> of vector addition: <span class="math inline"><strong>u</strong> + <strong>v</strong> = <strong>v</strong> + <strong>u</strong></span>.</li>
+<li><strong>Identity Element</strong> of vector addition: <span class="math inline">∃<strong>0</strong> ∈ <em>V</em></span> s.t. <span class="math inline"><strong>0</strong> + <strong>v</strong> = <strong>v</strong>, ∀<strong>v</strong> ∈ <em>V</em></span>.</li>
+<li><strong>Inverse Element</strong> of vector addition: <span class="math inline">∀<strong>v</strong> ∈ <em>V</em></span>, there
+exists <span class="math inline">−<strong>v</strong> ∈ <em>V</em></span>, s.t. <span class="math inline"><strong>v</strong> + (−<strong>v</strong>) = <strong>0</strong></span>.</li>
+<li><strong>Compatibility</strong> of scalar multiplication with field
+multiplication: <span class="math inline">∃<strong>0</strong> ∈ <em>V</em></span> s.t. <span class="math inline"><em>a</em>(<em>b</em><strong>v</strong>) = (<em>a</em><em>b</em>)<strong>v</strong></span>.</li>
+<li><strong>Identity Element</strong> of scalar multiplication: <span class="math inline">∃1 ∈ 𝕂</span> s.t. <span class="math inline">1<strong>v</strong> = <strong>v</strong>, ∀<strong>v</strong> ∈ <em>V</em></span>.</li>
+<li><strong>Distributivity</strong> of scalar multiplication with
+respect to the vector addition: <span class="math inline"><em>a</em>(<strong>u</strong> + <strong>v</strong>) = <em>a</em><strong>u</strong> + <em>a</em><strong>v</strong></span>.</li>
+<li><strong>Distributivity</strong> of vector addition with respect to
+the scalar multiplication: <span class="math inline">(<em>a</em> + <em>b</em>)<strong>v</strong> = <em>a</em><strong>v</strong> + <em>b</em><strong>v</strong></span>.</li>
+</ul>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><span class="math inline">ℝ<sup><em>n</em></sup>, ℂ<sup><em>n</em></sup>, C([0, 1])</span>.</li>
+</ul>
+<p><strong><em>Definition 2</em></strong> - A vector space <span class="math inline"><em>V</em></span> is
+<strong>finite-dimensional</strong> if every linearly independent set is
+a finite set. In other words, for all sets <span class="math inline"><em>E</em> ⊆ <em>V</em></span> such that <span class="math display">$$
+\sum_{i=1}^Na_i\mathbf v_i=0\Longrightarrow a_1=a_2=\dots a_N=0,\quad
+\forall \mathbf v_i\in E.
+$$</span> <span class="math inline"><em>E</em></span> has a finite
+cardinality. <span class="math inline"><em>V</em></span> is
+<strong>infinite-dimensional</strong> if it is not
+finite-dimensional.</p>
+<p><strong><em>Definition 3</em></strong> - A <strong>norm</strong> on
+the vector space <span class="math inline"><em>V</em></span> is a
+function <span class="math inline">‖⋅‖ : <em>V</em> → [0, ∞)</span>
+satisfying the following three properties:</p>
+<ul>
+<li><code>(Definiteness)</code> <span class="math inline">‖<strong>v</strong>‖ = 0</span> if and only if <span class="math inline"><strong>v</strong> = <strong>0</strong></span>.</li>
+<li><code>(Homogeneity)</code> <span class="math inline">‖<em>λ</em><strong>v</strong>‖ = |<em>λ</em>|‖<strong>v</strong>‖</span>
+for <span class="math inline">∀<strong>v</strong> ∈ <em>V</em></span>
+and <span class="math inline"><em>λ</em> ∈ 𝕂</span>.</li>
+<li><code>(Triangle Inequality)</code> <span class="math inline">‖<strong>v</strong><sub>1</sub> + <strong>v</strong><sub>2</sub>‖ ≤ ‖<strong>v</strong><sub>1</sub>‖+‖<strong>v</strong><sub>2</sub>‖</span>
+for <span class="math inline">∀<strong>v</strong><sub>1</sub>, <strong>v</strong><sub>2</sub> ∈ <em>V</em></span>.</li>
+</ul>
+<p>A <strong>seminorm</strong> is a function <span class="math inline">‖⋅‖ : <em>V</em> → [0, ∞)</span> which satisfies
+<code>(Homogeneity)</code> and <code>(Triangle Inequality)</code> but
+not necessarily <code>(Definiteness)</code>. A <em>vector space</em>
+equipped with a <em>norm</em> is called a <strong>normed
+space</strong>.</p>
+<p><strong><em>Definition 4</em></strong> - A <strong>metric</strong>
+<span class="math inline"><em>d</em> : <em>X</em> × <em>X</em> → [0, ∞)</span>
+is defined to follow the three conditions:</p>
+<ul>
+<li><code>(Identification)</code> <span class="math inline"><em>d</em>(<strong>u</strong>, <strong>v</strong>) = 0</span>
+if and only if <span class="math inline"><strong>u</strong> = <strong>v</strong></span>.</li>
+<li><code>(Symmetry)</code> <span class="math inline"><em>d</em>(<strong>u</strong>, <strong>v</strong>) = <em>d</em>(<strong>v</strong>, <strong>u</strong>)</span>.</li>
+<li><code>(Triangle Inequality)</code> <span class="math inline"><em>d</em>(<strong>u</strong>, <strong>v</strong>) + <em>d</em>(<strong>v</strong>, <strong>w</strong>) ≥ <em>d</em>(<strong>u</strong>, <strong>w</strong>)</span>
+for all <span class="math inline"><strong>u</strong>, <strong>v</strong>, <strong>w</strong> ∈ <em>V</em></span>.</li>
+</ul>
 
     </div>
 
@@ -382,13 +327,13 @@ mjx-container[display="true"] + br {
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/08/05/250804-blog-chirp-spread-spectrum/" rel="prev" title="Comm. CSS - part 03">
-                  <i class="fa fa-angle-left"></i> Comm. CSS - part 03
+                <a href="/2025/08/22/250822-blog-chirp-spread-spectrum/" rel="prev" title="Comm. CSS - part 08">
+                  <i class="fa fa-angle-left"></i> Comm. CSS - part 08
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/08/09/250809-blog-chirp-spread-spectrum/" rel="next" title="Comm. CSS - part 04">
-                  Comm. CSS - part 04 <i class="fa fa-angle-right"></i>
+                <a href="/2025/08/25/250825-blog-chirp-spread-spectrum/" rel="next" title="Comm. CSS - part 09">
+                  Comm. CSS - part 09 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
