@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="cont. Paper 39 - A New Digital LoRa Wireless Communication Based On a Rssler Chaotic Oscillator for IIoT 123&#39;&#39;&#39;	This paper investigated a novel waveform to refine the cross-correlation property of">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comm. CSS - part 08">
+<meta property="og:url" content="https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/index.html">
+<meta property="og:site_name" content="Vigorous">
+<meta property="og:description" content="cont. Paper 39 - A New Digital LoRa Wireless Communication Based On a Rssler Chaotic Oscillator for IIoT 123&#39;&#39;&#39;	This paper investigated a novel waveform to refine the cross-correlation property of">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/image-20250822103335500.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/image-20250822103432410.png">
+<meta property="article:published_time" content="2025-08-22T02:35:05.000Z">
+<meta property="article:modified_time" content="2025-08-22T10:59:10.276Z">
+<meta property="article:author" content="Y. Ye">
+<meta property="article:tag" content="Paper notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/image-20250822103335500.png">
+
+
+<link rel="canonical" href="https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/","path":"2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/","title":"Comm. CSS - part 08"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Comm. CSS - part 08 | Vigorous</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Vigorous</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learning Journey</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-39---a-new-digital-lora-wireless-communication-based-on-a-rddotmathbf-ossler-chaotic-oscillator-for-iiot"><span class="nav-number">1.</span> <span class="nav-text">Paper 39 - A New
+Digital LoRa Wireless Communication Based On a Rssler Chaotic Oscillator
+for IIoT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rddotossler-chaotic-oscillator"><span class="nav-number">1.1.</span> <span class="nav-text">Rssler chaotic oscillator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#correlation-property"><span class="nav-number">1.2.</span> <span class="nav-text">Correlation property</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-40---asynchronous-contention-resolution-aided-aloha-in-lr-fhss-networks"><span class="nav-number">2.</span> <span class="nav-text">Paper 40 -
+Asynchronous Contention Resolution-Aided ALOHA in LR-FHSS
+Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-41---orthogonal-chirp-frequency-division-multiplexing"><span class="nav-number">3.</span> <span class="nav-text">Paper 41 -
+Orthogonal Chirp-Frequency Division Multiplexing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-42---packet-collision-probability-of-direct-to-satellite-iot-systems"><span class="nav-number">4.</span> <span class="nav-text">Paper 42 - Packet
+Collision Probability of Direct-to-Satellite IoT Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-43---seamless-physical-layer-cross-technology-communication-from-zigbee-to-lora-via-neural-networks"><span class="nav-number">5.</span> <span class="nav-text">Paper 43 - Seamless
+Physical-Layer Cross-Technology Communication from ZigBee to LoRa via
+Neural Networks</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Y. Ye</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Unparased" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Unparased" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Y. Ye">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Comm. CSS - part 08 | Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Comm. CSS - part 08
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-08-22 10:35:05 / Modified: 18:59:10" itemprop="dateCreated datePublished" datetime="2025-08-22T10:35:05+08:00">2025-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Communications/" itemprop="url" rel="index"><span itemprop="name">Communications</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Communications/Chirp-Spread-Spectrum-CSS/" itemprop="url" rel="index"><span itemprop="name">Chirp Spread Spectrum (CSS)</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><code>cont.</code></p>
+<h2 id="paper-39---a-new-digital-lora-wireless-communication-based-on-a-rddotmathbf-ossler-chaotic-oscillator-for-iiot"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10978759">Paper 39 - A New
+Digital LoRa Wireless Communication Based On a R<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.011ex;" xmlns="http://www.w3.org/2000/svg" width="1.301ex" height="1.758ex" role="img" focusable="false" viewbox="0 -772 575 777"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mover"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D428" d="M287 -5Q228 -5 182 10T109 48T63 102T39 161T32 219Q32 272 50 314T94 382T154 423T214 446T265 452H279Q319 452 326 451Q428 439 485 376T542 221Q542 156 514 108T442 33Q384 -5 287 -5ZM399 230V250Q399 280 398 298T391 338T372 372T338 392T282 401Q241 401 212 380Q190 363 183 334T175 230Q175 202 175 189T177 153T183 118T195 91T215 68T245 56T287 50Q348 50 374 84Q388 101 393 132T399 230Z"/></g></g><g data-mml-node="mo" transform="translate(287.5,3) translate(-250 0)"><path data-c="A8" d="M95 612Q95 633 112 651T153 669T193 652T210 612Q210 588 194 571T152 554L127 560Q95 577 95 612ZM289 611Q289 634 304 649T335 668Q336 668 340 668T346 669Q369 669 386 652T404 612T387 572T346 554Q323 554 306 570T289 611Z"/></g></g></g></g></g></svg></mjx-container></span>ssler Chaotic Oscillator
+for IIoT</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper investigated a novel waveform to refine the cross-correlation property of CSS.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>In contrast to the <em>conventional LoRa</em>, the frequency novel
+proposed LoRa features a <strong>chaotic oscillator</strong>.</p>
+<h3 id="rddotossler-chaotic-oscillator">R<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.097ex" height="1.749ex" role="img" focusable="false" viewbox="0 -762 485 773"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mover"><g data-mml-node="mi"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"/></g><g data-mml-node="mo" transform="translate(298.1,-7) translate(-250 0)"><path data-c="A8" d="M95 612Q95 633 112 651T153 669T193 652T210 612Q210 588 194 571T152 554L127 560Q95 577 95 612ZM289 611Q289 634 304 649T335 668Q336 668 340 668T346 669Q369 669 386 652T404 612T387 572T346 554Q323 554 306 570T289 611Z"/></g></g></g></g></g></svg></mjx-container></span>ssler chaotic oscillator</h3>
+<figure>
+<img src="/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/image-20250822103335500.png" alt="Chaotic Oscillator">
+<figcaption aria-hidden="true">Chaotic Oscillator</figcaption>
+</figure>
+<p>This oscillator is determined by three parameters. Based on this, the
+waveform can be expressed as</p>
+<figure>
+<img src="/2025/08/22/chirp_spread_spectrum/250822-blog-chirp-spread-spectrum/image-20250822103432410.png" alt="Novel LoRa waveform">
+<figcaption aria-hidden="true">Novel LoRa waveform</figcaption>
+</figure>
+<p>where <span class="math inline"><em>x</em><sub><em>s</em></sub>(<em>t</em>)</span>
+satisfies the <span class="math inline"><em>x</em>(<em>t</em>)</span> in
+the equation above.</p>
+<h3 id="correlation-property">Correlation property</h3>
+<p>Compared with the conventional LoRa, the
+<code>cross-correlation outperforms really well</code>.</p>
+<h2 id="paper-40---asynchronous-contention-resolution-aided-aloha-in-lr-fhss-networks"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10403992">Paper 40 -
+Asynchronous Contention Resolution-Aided ALOHA in LR-FHSS
+Networks</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper investigated the asynchronous contention resolution technique applied to ALOHA to enhance the performance of LR-FHSS.</span></span><br><span class="line"><span class="string">	This paper can be viewed as a good stage delving into LR-FHSS.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-41---orthogonal-chirp-frequency-division-multiplexing"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10778593">Paper 41 -
+Orthogonal Chirp-Frequency Division Multiplexing</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper resembles "Paper 28", where the employment of OCDM is like OCDMA.</span></span><br><span class="line"><span class="string">	Besides, the analysis was emphasized. (Optimization on data rate) (computational complexity analysis)</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-42---packet-collision-probability-of-direct-to-satellite-iot-systems"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10699332">Paper 42 - Packet
+Collision Probability of Direct-to-Satellite IoT Systems</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper investogated the packet collision probability under the DtS-IoT systems with multiple terminals using LR-FHSS.</span></span><br><span class="line"><span class="string">	The conventional analysis did not rely on the realistic situations, such as satellite overflight duration, velocity, deployment, etc.</span></span><br><span class="line"><span class="string">	This paper considered these situations to fulfill the analytical analysis with respect to the actual.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-43---seamless-physical-layer-cross-technology-communication-from-zigbee-to-lora-via-neural-networks"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/11037791">Paper 43 - Seamless
+Physical-Layer Cross-Technology Communication from ZigBee to LoRa via
+Neural Networks</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper proposed a technique combining ZigBee with LoRa called ZigRa, where the neural networks were employed for translating ZigBee to LoRa to achieve the linking between long-range and short-rage communications.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Paper-notes/" rel="tag"># Paper notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/13/chirp_spread_spectrum/250814-blog-chirp-spread-spectrum/" rel="prev" title="Comm. CSS - part 07">
+                  <i class="fa fa-angle-left"></i> Comm. CSS - part 07
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/08/22/functional_analysis/Another/FA-Lec01/" rel="next" title="Functional Analysis - Lecture 01">
+                  Functional Analysis - Lecture 01 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Y. Ye</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

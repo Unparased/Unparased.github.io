@@ -259,18 +259,18 @@ mjx-container[display="true"] + br {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -301,7 +301,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/06/IMPA_FA_lec08/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/06/J_mathematica/day01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -319,7 +319,210 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/10/06/IMPA_FA_lec08/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 08</a>
+          <a href="/2025/10/06/J_mathematica/day01/" class="post-title-link" itemprop="url">Journey of Mathematica - Day 01</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-10-06 21:34:33" itemprop="dateCreated datePublished" datetime="2025-10-06T21:34:33+08:00">2025-10-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-10-07 15:39:31" itemprop="dateModified" datetime="2025-10-07T15:39:31+08:00">2025-10-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tools/Mathematica/" itemprop="url" rel="index"><span itemprop="name">Mathematica</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li><code>The Mathematica Book [Stephen Wolfram]</code></li>
+</ul>
+<h2 id="numerical-calculations">Numerical Calculations</h2>
+<ul>
+<li>Basic <strong>expressions</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Expression</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>x^y</code></td>
+<td style="text-align: center;">power</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>-x</code></td>
+<td style="text-align: center;">minus</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>x/y</code></td>
+<td style="text-align: center;">divide</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>x y z</code> or
+<code>x*y*z</code></td>
+<td style="text-align: center;">multiply</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>x+y+z</code></td>
+<td style="text-align: center;">add</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Exact and approximate results</li>
+</ul>
+<p>By default, <strong><em>Mathematica</em></strong> outputs the exact
+result as <code>2^100 = 1267650600228229401496703205376</code> rather
+than <code>1.26765*10^30</code>. To output the approximate results, the
+input should become <code>2^100//N</code> (<code>N</code> –
+numerical).</p>
+<p>When the input has an <strong>explicit decimal point</strong>, the
+corresponding output becomes an <strong>approximate result</strong>.</p>
+<ul>
+<li>Basic <strong>mathematical functions</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>Sqrt[x]</code></td>
+<td style="text-align: center;">square root</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Exp[x]</code></td>
+<td style="text-align: center;">exponential</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Log[x]</code></td>
+<td style="text-align: center;">natural logarithm</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Log[b,x]</code></td>
+<td style="text-align: center;">logarithm to base <code>b</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Sin[x], Cos[x], Tan[x]</code></td>
+<td style="text-align: center;">trigonometric functions</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ArcSin[x], ArcCos[x], ArcTan[x]</code></td>
+<td style="text-align: center;">inverse trigonometric functions</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>n!</code></td>
+<td style="text-align: center;">factorial</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Abs[x]</code></td>
+<td style="text-align: center;">absolute value</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Round[x]</code></td>
+<td style="text-align: center;">closest integer</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Mod[n,m]</code></td>
+<td style="text-align: center;"><code>n</code> modulo
+<code>m</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Random[]</code></td>
+<td style="text-align: center;">pseudorandom number [0, 1]</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Max[x,y,...], Min[x,y,...]</code></td>
+<td style="text-align: center;">maximum and minimum</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>FactorInteger[n]</code></td>
+<td style="text-align: center;">prime factors</td>
+</tr>
+</tbody>
+</table>
+<p>p.38</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/06/functional_analysis/IMPA/IMPA_FA_lec08/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Y. Ye">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/10/06/functional_analysis/IMPA/IMPA_FA_lec08/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 08</a>
         </h2>
 
         <div class="post-meta-container">
@@ -331,7 +534,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-10-06 21:34:33 / Modified: 23:04:22" itemprop="dateCreated datePublished" datetime="2025-10-06T21:34:33+08:00">2025-10-06</time>
+      <time title="Created: 2025-10-06 21:34:33 / Modified: 23:05:01" itemprop="dateCreated datePublished" datetime="2025-10-06T21:34:33+08:00">2025-10-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -436,7 +639,7 @@ maximal element. Hence, <span class="math inline">𝒳 ⊆ span𝒳<sup>′<
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/05/IMPA_FA_lec07/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/05/functional_analysis/IMPA/IMPA_FA_lec07/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -454,7 +657,7 @@ maximal element. Hence, <span class="math inline">𝒳 ⊆ span𝒳<sup>′<
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/10/05/IMPA_FA_lec07/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 07</a>
+          <a href="/2025/10/05/functional_analysis/IMPA/IMPA_FA_lec07/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 07</a>
         </h2>
 
         <div class="post-meta-container">
@@ -593,7 +796,7 @@ separable.</p></li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/02/mt_C1_5/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/02/measure_theory/mt_C1_5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -611,7 +814,7 @@ separable.</p></li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/10/02/mt_C1_5/" class="post-title-link" itemprop="url">MT C1.5 Completeness and Regularity</a>
+          <a href="/2025/10/02/measure_theory/mt_C1_5/" class="post-title-link" itemprop="url">MT C1.5 Completeness and Regularity</a>
         </h2>
 
         <div class="post-meta-container">
@@ -771,7 +974,7 @@ Then each <strong>Borel subset</strong> <span class="math inline"><em>A</em></sp
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/01/mt_C1_4/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/10/01/measure_theory/mt_C1_4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -789,7 +992,7 @@ Then each <strong>Borel subset</strong> <span class="math inline"><em>A</em></sp
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/10/01/mt_C1_4/" class="post-title-link" itemprop="url">MT C1.4 Lebesgue Measure</a>
+          <a href="/2025/10/01/measure_theory/mt_C1_4/" class="post-title-link" itemprop="url">MT C1.4 Lebesgue Measure</a>
         </h2>
 
         <div class="post-meta-container">
@@ -991,7 +1194,7 @@ result. Therefore, the assertion holds.</p></li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/22/IMPA_FA_lec06/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/22/functional_analysis/IMPA/IMPA_FA_lec06/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1009,7 +1212,7 @@ result. Therefore, the assertion holds.</p></li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/09/22/IMPA_FA_lec06/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 06</a>
+          <a href="/2025/09/22/functional_analysis/IMPA/IMPA_FA_lec06/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 06</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1155,7 +1358,7 @@ for <span class="math inline"><em>p</em> ≥ 1</span>.</li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/20/IMPA_FA_lec05/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/20/functional_analysis/IMPA/IMPA_FA_lec05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1173,7 +1376,7 @@ for <span class="math inline"><em>p</em> ≥ 1</span>.</li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/09/20/IMPA_FA_lec05/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 05</a>
+          <a href="/2025/09/20/functional_analysis/IMPA/IMPA_FA_lec05/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 05</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1308,7 +1511,7 @@ and the completeness holds.</li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/19/IMPA_FA_lec04/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/19/functional_analysis/IMPA/IMPA_FA_lec04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1326,7 +1529,7 @@ and the completeness holds.</li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/09/19/IMPA_FA_lec04/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 04</a>
+          <a href="/2025/09/19/functional_analysis/IMPA/IMPA_FA_lec04/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 04</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1477,7 +1680,7 @@ holds and <span class="math inline"><mjx-container class="MathJax" jax="SVG"><sv
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/18/IMPA_FA_lec03/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/18/functional_analysis/IMPA/IMPA_FA_lec03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1495,7 +1698,7 @@ holds and <span class="math inline"><mjx-container class="MathJax" jax="SVG"><sv
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/09/18/IMPA_FA_lec03/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 03</a>
+          <a href="/2025/09/18/functional_analysis/IMPA/IMPA_FA_lec03/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 03</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1597,7 +1800,7 @@ space</strong>.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/13/IMPA_FA_lec02/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/13/functional_analysis/IMPA/IMPA_FA_lec02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1615,7 +1818,7 @@ space</strong>.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/09/13/IMPA_FA_lec02/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 02</a>
+          <a href="/2025/09/13/functional_analysis/IMPA/IMPA_FA_lec02/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 02</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1720,134 +1923,8 @@ for all <em>convex sets</em> <span class="math inline">𝒦<sub><em>θ</em></sub
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/09/13/IMPA_FA_lec01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Y. Ye">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vigorous">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Vigorous">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/09/13/IMPA_FA_lec01/" class="post-title-link" itemprop="url">Functional Analysis (IMPA) - Lecture 01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-09-13 21:14:42 / Modified: 22:50:18" itemprop="dateCreated datePublished" datetime="2025-09-13T21:14:42+08:00">2025-09-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mathematics/Functional-Analysis/" itemprop="url" rel="index"><span itemprop="name">Functional Analysis</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="linear-spaces">Linear Spaces</h2>
-<p><strong><em>DEF</em></strong> : <span class="math inline">𝒳</span> is
-a <strong>linear space</strong> over a field <span class="math inline">𝕂</span> (<span class="math inline">ℂ</span> or
-<span class="math inline">ℝ</span>) if <span class="math inline">𝒳</span> is a set with <span class="math inline">2</span> <strong>operations</strong> <span class="math inline">+</span> and <span class="math inline">⋅</span>
-<code>(scalar multiplication)</code>.</p>
-<ul>
-<li><code>+</code>: <span class="math inline"><em>x</em>, <em>y</em> ∈ 𝒳 ⇒ <em>x</em> + <em>y</em> ∈ 𝒳</span>
-<ul>
-<li><code>Commutative</code>: <span class="math inline"><em>x</em> + <em>y</em> = <em>y</em> + <em>x</em></span></li>
-<li><code>Associative</code>: <span class="math inline"><em>x</em> + (<em>y</em> + <em>z</em>) = <em>x</em> + <em>y</em> + <em>z</em></span></li>
-<li><code>Group</code>: <span class="math inline">∃0</span>: <span class="math inline">0 + <em>x</em> = <em>x</em></span>; <span class="math inline">∃−<em>x</em></span>: <span class="math inline">−<em>x</em> + <em>x</em> = 0</span></li>
-</ul></li>
-<li><span class="math inline">⋅</span> : <span class="math inline"><em>x</em> ∈ 𝒳, <em>α</em>, <em>β</em> ∈ 𝕂 ⇒ <em>α</em><em>x</em> ∈ 𝒳</span>
-<ul>
-<li><code>Commutative</code>: <span class="math inline">(<em>α</em><em>β</em>)<em>x</em> = <em>α</em>(<em>β</em><em>x</em>)</span></li>
-<li><code>Distributive</code>: <span class="math inline">(<em>α</em> + <em>β</em>)<em>x</em> = <em>α</em><em>x</em> + <em>β</em><em>x</em></span>,
-<span class="math inline"><em>α</em>(<em>x</em> + <em>y</em>) = <em>α</em><em>x</em> + <em>α</em><em>y</em></span></li>
-<li><span class="math inline">1</span>: <span class="math inline">1 ⋅ <em>x</em> = <em>x</em></span></li>
-</ul></li>
-</ul>
-<p><strong><em>DEF</em></strong> : <span class="math inline">𝒴 ⊆ 𝒳</span> is a <strong>linear subspace</strong>
-if <span class="math inline"><em>x</em>, <em>y</em> ∈ 𝒴, <em>α</em> ∈ 𝕂</span>
-such that <span class="math inline"><em>α</em><em>x</em> + <em>y</em> ∈ 𝒴</span>.</p>
-<ul>
-<li><span class="math inline">{𝒴<sub><em>θ</em></sub> : <em>θ</em> ∈ ℐ}</span> is
-a set including <strong>linear subspace</strong> of <span class="math inline">𝒳</span>, then <span class="math inline">∩<sub><em>θ</em> ∈ ℐ</sub>𝒴<sub><em>θ</em></sub></span>
-is a <strong>linear subspace</strong> of <span class="math inline">𝒳</span>.</li>
-</ul>
-<p><strong><em>DEF</em></strong> : <span class="math inline">{𝒴<sub><em>θ</em></sub>, <em>θ</em> ∈ ℐ}</span> is
-<strong>totally ordered</strong> if <span class="math inline"><em>θ</em><sub>1</sub>, <em>θ</em><sub>2</sub> ∈ ℐ</span>
-<span class="math inline">𝒴<sub><em>θ</em><sub>1</sub></sub> ⊆ 𝒴<sub><em>θ</em><sub>2</sub></sub></span>
-or <span class="math inline">𝒴<sub><em>θ</em><sub>1</sub></sub> ⊇ 𝒴<sub><em>θ</em><sub>2</sub></sub></span>.</p>
-<ul>
-<li><span class="math inline">{𝒴<sub><em>θ</em></sub> : <em>θ</em> ∈ ℐ}</span> is
-a <strong><em>totally ordered set</em></strong> including <strong>linear
-subspace</strong> of <span class="math inline">𝒳</span>, <span class="math inline">∪<sub><em>θ</em> ∈ ℐ</sub>𝒴<sub><em>θ</em></sub></span>
-is a <strong>linear space</strong>.</li>
-</ul>
-<p><strong><em>DEF</em></strong> : <span class="math inline">𝒮 ⊆ 𝒳</span>, <strong>linear span</strong> of <span class="math inline">𝒮</span> is <span class="math inline"><em>L</em><em>S</em>(𝒮) = ∩<sub><em>θ</em></sub>𝒴<sub><em>θ</em></sub></span>
-for <span class="math inline">𝒴<sub><em>θ</em></sub> ⊇ 𝒮</span>.
-<code>[Smallest linear space containing S]</code></p>
-<ul>
-<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.972ex;" xmlns="http://www.w3.org/2000/svg" width="44.17ex" height="2.758ex" role="img" focusable="false" viewbox="0 -789.6 19523.1 1219.2"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43F" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"/></g><g data-mml-node="mi" transform="translate(681,0)"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"/></g><g data-mml-node="mo" transform="translate(1326,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1715,0)"><g data-mml-node="mi"><path data-c="53" d="M554 512Q536 512 536 522Q536 525 539 539T542 564Q542 588 528 604Q515 616 482 625T410 635Q374 635 349 624T312 594T295 561T290 532Q290 505 303 482T342 442T378 419T409 404Q435 391 451 383T494 357T535 323T562 282T574 231Q574 133 464 56T220 -22Q138 -22 78 21T18 123Q18 184 61 227T156 274Q178 274 178 263Q178 260 177 258Q172 247 164 239T151 227T136 218L127 213L124 202Q118 186 118 163Q120 124 165 86T292 48Q374 48 423 86T473 186V193Q473 267 347 327Q268 364 239 389Q191 431 191 486Q191 547 242 600T356 679T470 705Q472 705 478 705T489 704Q551 704 596 682T642 610Q642 566 621 545Q592 516 554 512Z"/></g></g><g data-mml-node="mo" transform="translate(2357,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/></g><g data-mml-node="mo" transform="translate(3023.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mo" transform="translate(4079.6,0)"><path data-c="7B" d="M434 -231Q434 -244 428 -250H410Q281 -250 230 -184Q225 -177 222 -172T217 -161T213 -148T211 -133T210 -111T209 -84T209 -47T209 0Q209 21 209 53Q208 142 204 153Q203 154 203 155Q189 191 153 211T82 231Q71 231 68 234T65 250T68 266T82 269Q116 269 152 289T203 345Q208 356 208 377T209 529V579Q209 634 215 656T244 698Q270 724 324 740Q361 748 377 749Q379 749 390 749T408 750H428Q434 744 434 732Q434 719 431 716Q429 713 415 713Q362 710 332 689T296 647Q291 634 291 499V417Q291 370 288 353T271 314Q240 271 184 255L170 250L184 245Q202 239 220 230T262 196T290 137Q291 131 291 1Q291 -134 296 -147Q306 -174 339 -192T415 -213Q429 -213 431 -216Q434 -219 434 -231Z"/></g><g data-mml-node="munderover" transform="translate(4579.6,0)"><g data-mml-node="mo"><path data-c="2211" d="M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z"/></g><g data-mml-node="TeXAtom" transform="translate(1089,477.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g></g><g data-mml-node="TeXAtom" transform="translate(1089,-285.4) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"/></g><g data-mml-node="mo" transform="translate(412,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mn" transform="translate(1190,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g></g></g><g data-mml-node="msub" transform="translate(7080.2,0)"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"/></g><g data-mml-node="mi" transform="translate(673,-150) scale(0.707)"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"/></g></g><g data-mml-node="msub" transform="translate(8094.6,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"/></g></g><g data-mml-node="mo" transform="translate(9318.7,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"/></g><g data-mml-node="msub" transform="translate(9874.4,0)"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"/></g><g data-mml-node="mi" transform="translate(673,-150) scale(0.707)"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"/></g></g><g data-mml-node="mo" transform="translate(11166.5,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"/></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(12111.3,0)"><g data-mml-node="mi"><path data-c="1D542" d="M22 666Q22 676 33 683H351L358 679Q368 665 358 655Q351 648 324 648Q288 645 280 637Q275 631 274 605T273 477L275 343L382 446Q473 530 492 553T512 599Q512 617 502 631T475 648Q455 651 455 666Q455 677 465 680T510 683H593H720Q732 676 732 666Q732 659 727 654T713 648Q670 648 589 581Q567 562 490 489T413 415Q413 413 554 245T711 61Q737 35 751 35Q758 35 763 29T768 15Q768 6 758 -1H624Q491 -1 486 3Q480 10 480 17Q480 25 487 30T506 35Q518 36 520 38T520 48L400 195L302 310L286 297L273 283V170Q275 65 277 57Q280 41 300 38Q302 37 324 35Q349 35 358 28Q367 17 358 3L351 -1H33Q22 4 22 16Q22 35 60 35Q101 38 106 52Q111 60 111 341T106 632Q100 645 60 648Q22 648 22 666ZM240 341V553Q240 635 246 648H138Q141 641 142 638T144 603T146 517T146 341Q146 131 145 89T139 37Q138 36 138 35H246Q240 47 240 129V341ZM595 632L615 648H535L542 637Q542 636 544 625T549 610V595L562 606Q565 608 577 618T595 632ZM524 226L386 388Q386 389 378 382T358 361Q330 338 330 333Q330 332 330 332L331 330L533 90Q558 55 558 41V35H684L671 50Q667 54 524 226Z"/></g></g><g data-mml-node="mo" transform="translate(12889.3,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"/></g><g data-mml-node="msub" transform="translate(13334,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"/></g></g><g data-mml-node="mo" transform="translate(14558.1,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"/></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(15502.9,0)"><g data-mml-node="mi"><path data-c="53" d="M554 512Q536 512 536 522Q536 525 539 539T542 564Q542 588 528 604Q515 616 482 625T410 635Q374 635 349 624T312 594T295 561T290 532Q290 505 303 482T342 442T378 419T409 404Q435 391 451 383T494 357T535 323T562 282T574 231Q574 133 464 56T220 -22Q138 -22 78 21T18 123Q18 184 61 227T156 274Q178 274 178 263Q178 260 177 258Q172 247 164 239T151 227T136 218L127 213L124 202Q118 186 118 163Q120 124 165 86T292 48Q374 48 423 86T473 186V193Q473 267 347 327Q268 364 239 389Q191 431 191 486Q191 547 242 600T356 679T470 705Q472 705 478 705T489 704Q551 704 596 682T642 610Q642 566 621 545Q592 516 554 512Z"/></g></g><g data-mml-node="mo" transform="translate(16144.9,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"/></g><g data-mml-node="mi" transform="translate(16589.5,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mo" transform="translate(17467.3,0)"><path data-c="2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"/></g><g data-mml-node="mn" transform="translate(18523.1,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g><g data-mml-node="mo" transform="translate(19023.1,0)"><path data-c="7D" d="M65 731Q65 745 68 747T88 750Q171 750 216 725T279 670Q288 649 289 635T291 501Q292 362 293 357Q306 312 345 291T417 269Q428 269 431 266T434 250T431 234T417 231Q380 231 345 210T298 157Q293 143 292 121T291 -28V-79Q291 -134 285 -156T256 -198Q202 -250 89 -250Q71 -250 68 -247T65 -230Q65 -224 65 -223T66 -218T69 -214T77 -213Q91 -213 108 -210T146 -200T183 -177T207 -139Q208 -134 209 3L210 139Q223 196 280 230Q315 247 330 250Q305 257 280 270Q225 304 212 352L210 362L209 498Q208 635 207 640Q195 680 154 696T77 713Q68 713 67 716T65 731Z"/></g></g></g></svg></mjx-container></span>.</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

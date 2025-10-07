@@ -259,18 +259,18 @@ mjx-container[display="true"] + br {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -301,7 +301,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/09/250809-blog-chirp-spread-spectrum/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -319,7 +319,194 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/08/09/250809-blog-chirp-spread-spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 04</a>
+          <a href="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 05</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-08-12 09:50:25 / Modified: 22:39:10" itemprop="dateCreated datePublished" datetime="2025-08-12T09:50:25+08:00">2025-08-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Communications/" itemprop="url" rel="index"><span itemprop="name">Communications</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Communications/Chirp-Spread-Spectrum-CSS/" itemprop="url" rel="index"><span itemprop="name">Chirp Spread Spectrum (CSS)</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>cont.</code></p>
+<h2 id="paper-23---mimo-based-chirp-spread-spectrum-with-permutation-matrix-modulation"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/10896647">Paper 23 -
+MIMO-Based Chirp Spread Spectrum With Permutation Matrix
+Modulation</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focuses on the MIMO-CSS-PMM transmission, where PMM employs the symbol mapping with respect to the transmitted symbols for transmitting more bits. </span></span><br><span class="line"><span class="string">	Then, the receiver refers to the conventional receiver to estimate the channel matrix followed by two techniques to detect symbols. </span></span><br><span class="line"><span class="string">	[Analytical Selection of Power Threshold]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="channel-and-signal-model">Channel and Signal Model</h3>
+<h4 id="pmm-scheme">PMM Scheme</h4>
+<p>Assume <span class="math inline"><em>N</em><sub><em>p</em></sub> = ⌊log<sub>2</sub>min (<em>N</em><sub><em>t</em></sub>!, <em>N</em><sub><em>r</em></sub>!)⌋</span>.
+For a normal case of <span class="math inline"><em>N</em><sub><em>r</em></sub> ≥ <em>N</em><sub><em>t</em></sub></span>,
+we have <span class="math inline"><em>N</em><sub><em>p</em></sub> = ⌊log<sub>2</sub><em>N</em><sub><em>t</em></sub>!⌋</span>
+bits for symbol mapping. Specifically, for the transmitted symbols <span class="math inline"><strong>x</strong><sub><em>t</em></sub> = [<em>x</em><sub>0</sub>, …, <em>x</em><sub><em>N</em><sub><em>t</em></sub> − 1</sub>]</span>,
+the corresponding transmitted symbols from antennas are given by <span class="math display"><strong>x</strong><sub><em>t</em>, <em>P</em></sub> = <strong>P</strong><strong>x</strong><sub><em>t</em></sub></span>
+where <span class="math inline"><strong>P</strong> ∈ 𝒫 = {<strong>P</strong><sub>0</sub>, …, <strong>P</strong><sub>2<sup><em>N</em><sub><em>p</em></sub></sup></sub>}</span>.</p>
+<h4 id="mimo-scheme">MIMO Scheme</h4>
+<p>The MIMO channel is constructed by a channel matrix <span class="math inline"><strong>H</strong> ∈ ℂ<sup><em>N</em><sub><em>r</em></sub> × <em>N</em><sub><em>t</em></sub></sup></span>.
+With the allocated power matrix of <span class="math inline"><strong>Γ</strong> = diag{<em>γ</em><sub>1</sub>, …, <em>γ</em><sub><em>N</em><sub><em>t</em></sub></sub>}</span>,
+the received symbols can be written as <span class="math display"><strong>Y</strong> = <strong>H</strong><strong>P</strong><strong>Γ</strong><strong>X</strong> + <strong>W</strong></span>
+where <span class="math inline"><strong>X</strong> ∈ ℂ<sup><em>N</em><sub><em>t</em></sub> × <em>M</em></sup></span>
+denotes the corresponding chirps within each antenna and each entry in
+<span class="math inline"><strong>W</strong></span> follows <span class="math inline">𝒞<em>N</em>(0, <em>σ</em><sup>2</sup>)</span>.</p>
+<p><em>It has been proven in <code>[23]</code> that <span class="math inline"><em>γ</em><sub>1</sub> ≠ … ≠ <em>γ</em><sub><em>N</em><sub><em>t</em></sub></sub></span>
+must hold.</em></p>
+<h3 id="maximum-likelihood-detection">Maximum Likelihood Detection</h3>
+<h4 id="coherent-detection">Coherent Detection</h4>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812100751932.png" alt="Fig Coherent Detection">
+<figcaption aria-hidden="true">Fig Coherent Detection</figcaption>
+</figure>
+<p>where the channel matrix <span class="math inline"><strong>H</strong></span> has been acquired or
+estimated.</p>
+<h4 id="non-coherent-detection">Non-coherent Detection</h4>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812101147000.png" alt="Fig Non-coherent Detection">
+<figcaption aria-hidden="true">Fig Non-coherent Detection</figcaption>
+</figure>
+<p>where the ML estimation of <span class="math inline"><strong>H</strong></span> is given by</p>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812101455963.png" alt="Fig ML estimation for effective channel matrix">
+<figcaption aria-hidden="true">Fig ML estimation for effective channel
+matrix</figcaption>
+</figure>
+<p>It is noteworthy that <span class="math inline"><strong>P</strong><sup><em>H</em></sup><strong>P</strong> = <strong>I</strong></span>
+such that the effect of <span class="math inline"><strong>P</strong></span> is eliminated. In such a
+case, the estimation for <span class="math inline"><strong>P</strong></span> cannot be achieved.</p>
+<h4 id="semi-coherent-detection">Semi-coherent Detection</h4>
+<p>The transmitter sends a consecutive sequence of
+<code>up-chirps</code> and <code>down-chirps</code> to achieve channel
+estimation (<code>without synchronization</code>). The channel
+estimation renders <span class="math inline"><em>N</em><sub><em>s</em></sub></span> steps, where
+each step utilizes the successive transmitted up-chirps from every
+individual antenna. Then, the columns of corresponding channel matrix
+can be estimated afterwards by <code>LS</code>. Averaging the estimated
+results within <span class="math inline"><em>N</em><sub><em>s</em></sub></span> steps yields
+the estimated channel matrix. The detection for <span class="math inline"><strong>P</strong></span> and <span class="math inline"><strong>C</strong></span> follows.</p>
+<p><em>The <code>MSE</code> of the estimates with respect to the
+effective channel matrix is also given.</em></p>
+<h3 id="low-complexity-receiver">Low-complexity receiver</h3>
+<ul>
+<li><p><code>dechirp</code> + <code>DFT</code></p></li>
+<li><p><code>DFT sequence</code>:</p>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812131221189.png" alt="DFT sequence">
+<figcaption aria-hidden="true">DFT sequence</figcaption>
+</figure>
+<p>where <span class="math inline">𝒯<sub><em>u</em></sub></span> denotes
+the set of antennas transmitting symbol <span class="math inline"><em>u</em></span>.</p></li>
+<li><p><code>Averaging to exploit the spatial diversity:</code></p>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812131548283.png" alt="averaging">
+<figcaption aria-hidden="true">averaging</figcaption>
+</figure></li>
+<li><p><em>Scheme I</em></p>
+<ul>
+<li>Find <span class="math inline"><em>N</em><sub><em>t</em></sub></span> largest
+absolute values within <span class="math inline"><em>z̄</em>[<em>n</em>]</span>.</li>
+<li>Then the CSS symbol set <span class="math inline">𝒳</span> is
+employed for searching to achieve <code>ML</code>.</li>
+</ul></li>
+<li><p><em>Scheme II</em></p>
+<ul>
+<li>A predefined <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+used to separate the peaks such that the absolute value exceeding <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+the desired peaks and the one less than <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+regarded as noise.</li>
+<li>The corresponding probability of detection dependent on <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+analyzed so that the analytical result with respect to <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> can
+be acquired. [<code>Specific details are omitted</code>]</li>
+</ul></li>
+</ul>
+<h2 id="paper-24---ncdt-css-enhancing-performance-using-noncoherent-distributed-transmission-of-chirp-spread-spectrum"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10848218">Paper 24 - NCDT-CSS
+Enhancing Performance Using Noncoherent Distributed Transmission of
+Chirp Spread Spectrum</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper is the details of `Paper 15`, where the channel estimation together with symbol detection is investigated specifically. [Meaningless]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-25---ris-assisted-dual-function-radar-and-secure-communications-based-on-frequency-shifted-chirp-spread-spectrum-index-modulation"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10310072">Paper 25 - RIS
+Assisted Dual-Function Radar and Secure Communications Based on
+Frequency-Shifted Chirp Spread Spectrum Index Modulation</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper considered the employment of CSS, RIS, and IM to comprehensively achieve ISAC.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-26---implementation-of-a-low-earth-orbit-satellite-chirped-preamble-detector"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10608398">Paper 26 -
+Implementation of a Low-Earth Orbit Satellite Chirped Preamble
+Detector</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the chirps employed within LEO scenarios. </span></span><br><span class="line"><span class="string">	Then, the oversampling techniques were exploited to enhance the overeall DETECTION performance. </span></span><br><span class="line"><span class="string">	[Simply for preamble synchronization without EMPHASIZED fractional delay or Doppler shifts]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-27---ocdm-with-index-modulation-for-autonomous-underwater-vehicles-communication"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10488729">Paper 27 - OCDM
+with Index Modulation for Autonomous Underwater Vehicles
+Communication</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the OCDM-IM for AUV communications, where the channel was assumed to be known.</span></span><br><span class="line"><span class="string">	Then, the ZF and MMSE were used for demodulating OCDM, followed by ML for mapping and symbols.</span></span><br><span class="line"><span class="string">	Finally, the LLR detector was employed for further delving into the bits.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/09/chirp_spread_spectrum/250809-blog-chirp-spread-spectrum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Y. Ye">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/08/09/chirp_spread_spectrum/250809-blog-chirp-spread-spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 04</a>
         </h2>
 
         <div class="post-meta-container">
@@ -392,7 +579,7 @@ noise.</p>
 <h3 id="signal-model">Signal Model</h3>
 <p>The <code>DM-TDM-CSS</code> employs the following technique:</p>
 <figure>
-<img src="/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810121729461.png" alt="FIG DM-TDM-CSS">
+<img src="/2025/08/09/chirp_spread_spectrum/250809-blog-chirp-spread-spectrum/image-20250810121729461.png" alt="FIG DM-TDM-CSS">
 <figcaption aria-hidden="true">FIG DM-TDM-CSS</figcaption>
 </figure>
 <p>The <span class="math inline"><em>S</em><em>F</em> − 1</span> bits
@@ -408,7 +595,7 @@ Chirp Spread Spectrum Modulations for LPWANs</a></h2>
 <p>The diagram of how <code>LCSS</code> is employed is illustrated as
 follows:</p>
 <figure>
-<img src="/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810122538675.png" alt="FIG LCSS">
+<img src="/2025/08/09/chirp_spread_spectrum/250809-blog-chirp-spread-spectrum/image-20250810122538675.png" alt="FIG LCSS">
 <figcaption aria-hidden="true">FIG LCSS</figcaption>
 </figure>
 <p>where different chirp rates are employed. Then, the corresponding
@@ -416,7 +603,7 @@ coherent detection and non-coherent detection are both considered.</p>
 <p>Then, its extended version referred to as <code>LDMCSS</code> is
 involved as follows:</p>
 <figure>
-<img src="/2025/08/09/250809-blog-chirp-spread-spectrum/image-20250810122638705.png" alt="FIG LDMCSS">
+<img src="/2025/08/09/chirp_spread_spectrum/250809-blog-chirp-spread-spectrum/image-20250810122638705.png" alt="FIG LDMCSS">
 <figcaption aria-hidden="true">FIG LDMCSS</figcaption>
 </figure>
 <p>where the <code>DM</code> technique is employed. Then, the
@@ -449,7 +636,7 @@ Afterwards, the <strong>BER approximation</strong> is provided.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/05/250804-blog-chirp-spread-spectrum/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/05/chirp_spread_spectrum/250804-blog-chirp-spread-spectrum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -467,7 +654,7 @@ Afterwards, the <strong>BER approximation</strong> is provided.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/08/05/250804-blog-chirp-spread-spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 03</a>
+          <a href="/2025/08/05/chirp_spread_spectrum/250804-blog-chirp-spread-spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 03</a>
         </h2>
 
         <div class="post-meta-container">
@@ -538,7 +725,7 @@ Design and Performance Analysis</h2>
 <p><code>LGCSS</code> relies on an extra dimension of chirp rate as
 follows:</p>
 <figure>
-<img src="/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250806151641551.png" alt="Fig.9.1 chirp_rate_dimension">
+<img src="/2025/08/05/chirp_spread_spectrum/250804-blog-chirp-spread-spectrum/image-20250806151641551.png" alt="Fig.9.1 chirp_rate_dimension">
 <figcaption aria-hidden="true">Fig.9.1 chirp_rate_dimension</figcaption>
 </figure>
 <p>where <span class="math inline"><em>l</em></span> denotes the index
@@ -546,7 +733,7 @@ of the corresponding layer or of the chirp rate. Besides, the detection
 relies on the <code>ML</code> criterion. The corresponding diagram is
 given as</p>
 <figure>
-<img src="/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250806151910652.png" alt="Fig.9.2 transmission diagram">
+<img src="/2025/08/05/chirp_spread_spectrum/250804-blog-chirp-spread-spectrum/image-20250806151910652.png" alt="Fig.9.2 transmission diagram">
 <figcaption aria-hidden="true">Fig.9.2 transmission diagram</figcaption>
 </figure>
 <h2 id="paper-10---chirp-spread-spectrum-based-waveform-design-and-detection-mechanisms-for-lpwan-based-iot-a-survey-ieee-access"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10391276">Paper 10 - Chirp
@@ -661,7 +848,7 @@ The corresponding symbol is <span class="math inline"><em>k</em> = 4<em>u</e
 <h4 id="demodulation">Demodulation</h4>
 <p>The log-likelihood ratio is employed as</p>
 <figure>
-<img src="/2025/08/05/250804-blog-chirp-spread-spectrum/image-20250809171837847.png" alt="LLR for TCM-CSS">
+<img src="/2025/08/05/chirp_spread_spectrum/250804-blog-chirp-spread-spectrum/image-20250809171837847.png" alt="LLR for TCM-CSS">
 <figcaption aria-hidden="true">LLR for TCM-CSS</figcaption>
 </figure>
 <p>Then, a <strong>Viterbi decoder</strong> is employed to enhance the
@@ -692,7 +879,7 @@ performance.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/04/IT-C2-Entropy-Relative-Entropy-and-Mutual-Information/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/04/information_theory/IT-C2-Entropy-Relative-Entropy-and-Mutual-Information/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -710,7 +897,7 @@ performance.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/08/04/IT-C2-Entropy-Relative-Entropy-and-Mutual-Information/" class="post-title-link" itemprop="url">IT C2 Entropy Relative Entropy and Mutual Information</a>
+          <a href="/2025/08/04/information_theory/IT-C2-Entropy-Relative-Entropy-and-Mutual-Information/" class="post-title-link" itemprop="url">IT C2 Entropy Relative Entropy and Mutual Information</a>
         </h2>
 
         <div class="post-meta-container">
@@ -834,7 +1021,7 @@ Jensen’s inequality and its consequences</h2>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/04/250803_blog_chirp_spread_spectrum/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -852,7 +1039,7 @@ Jensen’s inequality and its consequences</h2>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/08/04/250803_blog_chirp_spread_spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 02</a>
+          <a href="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 02</a>
         </h2>
 
         <div class="post-meta-container">
@@ -921,20 +1108,20 @@ information but the non-coherent one does not need that.</p></li>
 <ul>
 <li><p><em>ICS-LoRa</em>: <code>[68]</code> (extra 1 bit)</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804131312028.png" alt="image-20250804131312028">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804131312028.png" alt="image-20250804131312028">
 <figcaption aria-hidden="true">image-20250804131312028</figcaption>
 </figure></li>
 <li><p><em>SSK-LoRa</em>: <code>[25]</code> (extra 1 bit)
 <code>[for up-chirps or down-chirps]</code></p></li>
 <li><p><em>IQ-CSS</em>: <code>[41]</code> (extra SF bits)</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804131241083.png" alt="image-20250804131241083">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804131241083.png" alt="image-20250804131241083">
 <figcaption aria-hidden="true">image-20250804131241083</figcaption>
 </figure></li>
 <li><p><em>DCDSK (dual chirp direction shift keying)</em>:
 <code>[77]</code> (extra SF bits)</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804131525365.png" alt="image-20250804131525365">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804131525365.png" alt="image-20250804131525365">
 <figcaption aria-hidden="true">image-20250804131525365</figcaption>
 </figure></li>
 <li><p><em>DCRK-CSS (discrete chirp rate keying CSS)</em>:
@@ -942,7 +1129,7 @@ information but the non-coherent one does not need that.</p></li>
 <span class="math inline">2<sup><em>N</em><sub><em>c</em></sub></sup></span>
 chirp rates are available)</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804131847529.png" alt="image-20250804131847529">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804131847529.png" alt="image-20250804131847529">
 <figcaption aria-hidden="true">image-20250804131847529</figcaption>
 </figure></li>
 <li><p><em>PSK-LoRa (phase shift keying-LoRa)</em>: <code>[69]</code>
@@ -970,7 +1157,7 @@ yielding <span class="math inline">log (<em>M</em>/<em>N</em><sub><em>s</em><e
 bits. Then, the PSK is modulated onto each peak such that extra <span class="math inline"><em>N</em><sub><em>s</em><em>u</em><em>b</em></sub><em>N</em><sub><em>P</em><em>S</em></sub></span>
 is employed.</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804145845254.png" alt="image-20250804145845254">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804145845254.png" alt="image-20250804145845254">
 <figcaption aria-hidden="true">image-20250804145845254</figcaption>
 </figure></li>
 <li><p><em>GCSS (group-based CSS)</em>: <code>[73]</code> (<span class="math inline"><em>N</em><sub><em>s</em><em>u</em><em>b</em></sub>log (<em>M</em>/<em>N</em><sub><em>s</em><em>u</em><em>b</em></sub>)</span>
@@ -980,14 +1167,14 @@ divided into <span class="math inline"><em>N</em><sub><em>s</em><em>u</em><em>b<
 groups, each yielding <span class="math inline">log (<em>M</em>/<em>N</em><sub><em>s</em><em>u</em><em>b</em></sub>)</span>
 bits.</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804150429521.png" alt="image-20250804150429521">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804150429521.png" alt="image-20250804150429521">
 <figcaption aria-hidden="true">image-20250804150429521</figcaption>
 </figure></li>
 <li><p><em>TDM-LoRa (time domain multiplexed LoRa)</em>:
 <code>[43]</code> (extra <span class="math inline"><em>S</em><em>F</em></span> bits, where up-chirps
 and down-chirps are superimposed)</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804150554191.png" alt="image-20250804150554191">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804150554191.png" alt="image-20250804150554191">
 <figcaption aria-hidden="true">image-20250804150554191</figcaption>
 </figure></li>
 </ul>
@@ -995,36 +1182,36 @@ and down-chirps are superimposed)</p>
 <ul>
 <li><p><strong>Estimate for <span class="math inline"><em>F</em><sub><em>C</em><em>F</em><em>O</em></sub></span></strong>:
 Based on the fact of <span class="math inline"><em>r</em><sub><em>w</em></sub>[<em>k</em>] = <em>r</em><sub><em>w</em> − 1</sub>[<em>k</em>]<em>e</em><sup><em>j</em>2<em>π</em><em>F</em><sub><em>C</em><em>F</em><em>O</em></sub></sup></span>,
-we have<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804151634117.png" alt="image-20250804151634117"><code>[58]</code></p></li>
+we have<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804151634117.png" alt="image-20250804151634117"><code>[58]</code></p></li>
 <li><p><strong>Estimation for <span class="math inline"><em>I</em><sub><em>C</em><em>F</em><em>O</em></sub></span>
 and <span class="math inline"><em>I</em><sub><em>S</em><em>T</em><em>O</em></sub></span></strong>:</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804151919798.png" alt="image-20250804151919798">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804151919798.png" alt="image-20250804151919798">
 <figcaption aria-hidden="true">image-20250804151919798</figcaption>
 </figure>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804151941285.png" alt="image-20250804151941285">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804151941285.png" alt="image-20250804151941285">
 <figcaption aria-hidden="true">image-20250804151941285</figcaption>
 </figure>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804152021880.png" alt="image-20250804152021880">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804152021880.png" alt="image-20250804152021880">
 <figcaption aria-hidden="true">image-20250804152021880</figcaption>
 </figure>
 <p>where <span class="math inline">𝒜<sub><em>M</em></sub></span> is
 given as</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804152006102.png" alt="image-20250804152006102">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804152006102.png" alt="image-20250804152006102">
 <figcaption aria-hidden="true">image-20250804152006102</figcaption>
 </figure></li>
 <li><p><strong>Estimation for <span class="math inline"><em>F</em><sub><em>S</em><em>T</em><em>O</em></sub></span></strong>:
 The estimation is based on the function of</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804152102052.png" alt="image-20250804152102052">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804152102052.png" alt="image-20250804152102052">
 <figcaption aria-hidden="true">image-20250804152102052</figcaption>
 </figure>
 <p>so we have</p>
 <figure>
-<img src="/2025/08/04/250803_blog_chirp_spread_spectrum/image-20250804152110917.png" alt="image-20250804152110917">
+<img src="/2025/08/04/chirp_spread_spectrum/250803_blog_chirp_spread_spectrum/image-20250804152110917.png" alt="image-20250804152110917">
 <figcaption aria-hidden="true">image-20250804152110917</figcaption>
 </figure></li>
 <li><p>The improvements for synchronization has been provided in
@@ -1071,7 +1258,7 @@ Identification in Indoor Localization</a></h2>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/02/250802_blog_chirp_spread_spectrum/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/02/chirp_spread_spectrum/250802_blog_chirp_spread_spectrum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1089,7 +1276,7 @@ Identification in Indoor Localization</a></h2>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/08/02/250802_blog_chirp_spread_spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 01</a>
+          <a href="/2025/08/02/chirp_spread_spectrum/250802_blog_chirp_spread_spectrum/" class="post-title-link" itemprop="url">Comm. CSS - part 01</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1203,7 +1390,7 @@ depiction of the <code>two approaches</code> is given as follows.</p>
 <ul>
 <li><p>The temporal figure is given as follows:</p>
 <figure>
-<img src="/2025/08/02/250802_blog_chirp_spread_spectrum/DSFSC_DCSZ_symbols.png" alt="DSFSC_DCSZ_symbols">
+<img src="/2025/08/02/chirp_spread_spectrum/250802_blog_chirp_spread_spectrum/DSFSC_DCSZ_symbols.png" alt="DSFSC_DCSZ_symbols">
 <figcaption aria-hidden="true">DSFSC_DCSZ_symbols</figcaption>
 </figure>
 <p>where each symbol is composed of <code>two parts</code>, one with
@@ -1214,7 +1401,7 @@ starting at <code>0</code>.</p></li>
 <ul>
 <li><p>The temporal figure is given as follows:</p>
 <figure>
-<img src="/2025/08/02/250802_blog_chirp_spread_spectrum/DSFSC_DCSMF_symbols.png" alt="DSFSC_DCSMF_symbols">
+<img src="/2025/08/02/chirp_spread_spectrum/250802_blog_chirp_spread_spectrum/DSFSC_DCSMF_symbols.png" alt="DSFSC_DCSMF_symbols">
 <figcaption aria-hidden="true">DSFSC_DCSMF_symbols</figcaption>
 </figure>
 <p>where each symbol also consists of <code>two parts</code>, the first
@@ -1272,7 +1459,7 @@ parameter sets <em>(by solely using bandwidth)</em>.</li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/07/24/mt_C1_3/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/07/24/measure_theory/mt_C1_3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1290,7 +1477,7 @@ parameter sets <em>(by solely using bandwidth)</em>.</li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/07/24/mt_C1_3/" class="post-title-link" itemprop="url">MT C1.3 Outer Measure</a>
+          <a href="/2025/07/24/measure_theory/mt_C1_3/" class="post-title-link" itemprop="url">MT C1.3 Outer Measure</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1410,7 +1597,7 @@ measurable.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/19/mt_C1_2/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/19/measure_theory/mt_C1_2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1428,7 +1615,7 @@ measurable.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/19/mt_C1_2/" class="post-title-link" itemprop="url">MT C1.2 Measures</a>
+          <a href="/2025/06/19/measure_theory/mt_C1_2/" class="post-title-link" itemprop="url">MT C1.2 Measures</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1572,7 +1759,7 @@ if there is a countable subset <span class="math inline"><em>D</em></span> of <s
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/16/mt_C1_1/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/16/measure_theory/mt_C1_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1590,7 +1777,7 @@ if there is a countable subset <span class="math inline"><em>D</em></span> of <s
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/16/mt_C1_1/" class="post-title-link" itemprop="url">MT C1.1 Algebras and Sigma-Algebras</a>
+          <a href="/2025/06/16/measure_theory/mt_C1_1/" class="post-title-link" itemprop="url">MT C1.1 Algebras and Sigma-Algebras</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1718,7 +1905,7 @@ sets</strong>.</p></li>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/13/mt_C0_introduction/">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/13/measure_theory/mt_C0_introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1736,7 +1923,7 @@ sets</strong>.</p></li>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/13/mt_C0_introduction/" class="post-title-link" itemprop="url">MT C0 Introduction</a>
+          <a href="/2025/06/13/measure_theory/mt_C0_introduction/" class="post-title-link" itemprop="url">MT C0 Introduction</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1832,95 +2019,8 @@ for <span class="math inline">∀‖𝒫‖ &lt; <em>δ</em></span>.</li>
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/06/12/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Y. Ye">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vigorous">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Vigorous">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-06-12 22:49:22 / Modified: 22:33:25" itemprop="dateCreated datePublished" datetime="2025-06-12T22:49:22+08:00">2025-06-12</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

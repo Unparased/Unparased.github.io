@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="cont. Paper 23 - MIMO-Based Chirp Spread Spectrum With Permutation Matrix Modulation 12345&#39;&#39;&#39;	This paper focuses on the MIMO-CSS-PMM transmission, where PMM employs the symbol mapping with respect">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comm. CSS - part 05">
+<meta property="og:url" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/index.html">
+<meta property="og:site_name" content="Vigorous">
+<meta property="og:description" content="cont. Paper 23 - MIMO-Based Chirp Spread Spectrum With Permutation Matrix Modulation 12345&#39;&#39;&#39;	This paper focuses on the MIMO-CSS-PMM transmission, where PMM employs the symbol mapping with respect">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812100751932.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812101147000.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812101455963.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812131221189.png">
+<meta property="og:image" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812131548283.png">
+<meta property="article:published_time" content="2025-08-12T01:50:25.000Z">
+<meta property="article:modified_time" content="2025-08-12T14:39:10.080Z">
+<meta property="article:author" content="Y. Ye">
+<meta property="article:tag" content="Paper notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812100751932.png">
+
+
+<link rel="canonical" href="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/","path":"2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/","title":"Comm. CSS - part 05"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Comm. CSS - part 05 | Vigorous</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Vigorous</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learning Journey</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-23---mimo-based-chirp-spread-spectrum-with-permutation-matrix-modulation"><span class="nav-number">1.</span> <span class="nav-text">Paper 23 -
+MIMO-Based Chirp Spread Spectrum With Permutation Matrix
+Modulation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#channel-and-signal-model"><span class="nav-number">1.1.</span> <span class="nav-text">Channel and Signal Model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pmm-scheme"><span class="nav-number">1.1.1.</span> <span class="nav-text">PMM Scheme</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mimo-scheme"><span class="nav-number">1.1.2.</span> <span class="nav-text">MIMO Scheme</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maximum-likelihood-detection"><span class="nav-number">1.2.</span> <span class="nav-text">Maximum Likelihood Detection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#coherent-detection"><span class="nav-number">1.2.1.</span> <span class="nav-text">Coherent Detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#non-coherent-detection"><span class="nav-number">1.2.2.</span> <span class="nav-text">Non-coherent Detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#semi-coherent-detection"><span class="nav-number">1.2.3.</span> <span class="nav-text">Semi-coherent Detection</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#low-complexity-receiver"><span class="nav-number">1.3.</span> <span class="nav-text">Low-complexity receiver</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-24---ncdt-css-enhancing-performance-using-noncoherent-distributed-transmission-of-chirp-spread-spectrum"><span class="nav-number">2.</span> <span class="nav-text">Paper 24 - NCDT-CSS
+Enhancing Performance Using Noncoherent Distributed Transmission of
+Chirp Spread Spectrum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-25---ris-assisted-dual-function-radar-and-secure-communications-based-on-frequency-shifted-chirp-spread-spectrum-index-modulation"><span class="nav-number">3.</span> <span class="nav-text">Paper 25 - RIS
+Assisted Dual-Function Radar and Secure Communications Based on
+Frequency-Shifted Chirp Spread Spectrum Index Modulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-26---implementation-of-a-low-earth-orbit-satellite-chirped-preamble-detector"><span class="nav-number">4.</span> <span class="nav-text">Paper 26 -
+Implementation of a Low-Earth Orbit Satellite Chirped Preamble
+Detector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#paper-27---ocdm-with-index-modulation-for-autonomous-underwater-vehicles-communication"><span class="nav-number">5.</span> <span class="nav-text">Paper 27 - OCDM
+with Index Modulation for Autonomous Underwater Vehicles
+Communication</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Y. Ye</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Unparased" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Unparased" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unparased.github.io/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Y. Ye">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Comm. CSS - part 05 | Vigorous">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Comm. CSS - part 05
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-08-12 09:50:25 / Modified: 22:39:10" itemprop="dateCreated datePublished" datetime="2025-08-12T09:50:25+08:00">2025-08-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Communications/" itemprop="url" rel="index"><span itemprop="name">Communications</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Communications/Chirp-Spread-Spectrum-CSS/" itemprop="url" rel="index"><span itemprop="name">Chirp Spread Spectrum (CSS)</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><code>cont.</code></p>
+<h2 id="paper-23---mimo-based-chirp-spread-spectrum-with-permutation-matrix-modulation"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/10896647">Paper 23 -
+MIMO-Based Chirp Spread Spectrum With Permutation Matrix
+Modulation</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focuses on the MIMO-CSS-PMM transmission, where PMM employs the symbol mapping with respect to the transmitted symbols for transmitting more bits. </span></span><br><span class="line"><span class="string">	Then, the receiver refers to the conventional receiver to estimate the channel matrix followed by two techniques to detect symbols. </span></span><br><span class="line"><span class="string">	[Analytical Selection of Power Threshold]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="channel-and-signal-model">Channel and Signal Model</h3>
+<h4 id="pmm-scheme">PMM Scheme</h4>
+<p>Assume <span class="math inline"><em>N</em><sub><em>p</em></sub> = ⌊log<sub>2</sub>min (<em>N</em><sub><em>t</em></sub>!, <em>N</em><sub><em>r</em></sub>!)⌋</span>.
+For a normal case of <span class="math inline"><em>N</em><sub><em>r</em></sub> ≥ <em>N</em><sub><em>t</em></sub></span>,
+we have <span class="math inline"><em>N</em><sub><em>p</em></sub> = ⌊log<sub>2</sub><em>N</em><sub><em>t</em></sub>!⌋</span>
+bits for symbol mapping. Specifically, for the transmitted symbols <span class="math inline"><strong>x</strong><sub><em>t</em></sub> = [<em>x</em><sub>0</sub>, …, <em>x</em><sub><em>N</em><sub><em>t</em></sub> − 1</sub>]</span>,
+the corresponding transmitted symbols from antennas are given by <span class="math display"><strong>x</strong><sub><em>t</em>, <em>P</em></sub> = <strong>P</strong><strong>x</strong><sub><em>t</em></sub></span>
+where <span class="math inline"><strong>P</strong> ∈ 𝒫 = {<strong>P</strong><sub>0</sub>, …, <strong>P</strong><sub>2<sup><em>N</em><sub><em>p</em></sub></sup></sub>}</span>.</p>
+<h4 id="mimo-scheme">MIMO Scheme</h4>
+<p>The MIMO channel is constructed by a channel matrix <span class="math inline"><strong>H</strong> ∈ ℂ<sup><em>N</em><sub><em>r</em></sub> × <em>N</em><sub><em>t</em></sub></sup></span>.
+With the allocated power matrix of <span class="math inline"><strong>Γ</strong> = diag{<em>γ</em><sub>1</sub>, …, <em>γ</em><sub><em>N</em><sub><em>t</em></sub></sub>}</span>,
+the received symbols can be written as <span class="math display"><strong>Y</strong> = <strong>H</strong><strong>P</strong><strong>Γ</strong><strong>X</strong> + <strong>W</strong></span>
+where <span class="math inline"><strong>X</strong> ∈ ℂ<sup><em>N</em><sub><em>t</em></sub> × <em>M</em></sup></span>
+denotes the corresponding chirps within each antenna and each entry in
+<span class="math inline"><strong>W</strong></span> follows <span class="math inline">𝒞<em>N</em>(0, <em>σ</em><sup>2</sup>)</span>.</p>
+<p><em>It has been proven in <code>[23]</code> that <span class="math inline"><em>γ</em><sub>1</sub> ≠ … ≠ <em>γ</em><sub><em>N</em><sub><em>t</em></sub></sub></span>
+must hold.</em></p>
+<h3 id="maximum-likelihood-detection">Maximum Likelihood Detection</h3>
+<h4 id="coherent-detection">Coherent Detection</h4>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812100751932.png" alt="Fig Coherent Detection">
+<figcaption aria-hidden="true">Fig Coherent Detection</figcaption>
+</figure>
+<p>where the channel matrix <span class="math inline"><strong>H</strong></span> has been acquired or
+estimated.</p>
+<h4 id="non-coherent-detection">Non-coherent Detection</h4>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812101147000.png" alt="Fig Non-coherent Detection">
+<figcaption aria-hidden="true">Fig Non-coherent Detection</figcaption>
+</figure>
+<p>where the ML estimation of <span class="math inline"><strong>H</strong></span> is given by</p>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812101455963.png" alt="Fig ML estimation for effective channel matrix">
+<figcaption aria-hidden="true">Fig ML estimation for effective channel
+matrix</figcaption>
+</figure>
+<p>It is noteworthy that <span class="math inline"><strong>P</strong><sup><em>H</em></sup><strong>P</strong> = <strong>I</strong></span>
+such that the effect of <span class="math inline"><strong>P</strong></span> is eliminated. In such a
+case, the estimation for <span class="math inline"><strong>P</strong></span> cannot be achieved.</p>
+<h4 id="semi-coherent-detection">Semi-coherent Detection</h4>
+<p>The transmitter sends a consecutive sequence of
+<code>up-chirps</code> and <code>down-chirps</code> to achieve channel
+estimation (<code>without synchronization</code>). The channel
+estimation renders <span class="math inline"><em>N</em><sub><em>s</em></sub></span> steps, where
+each step utilizes the successive transmitted up-chirps from every
+individual antenna. Then, the columns of corresponding channel matrix
+can be estimated afterwards by <code>LS</code>. Averaging the estimated
+results within <span class="math inline"><em>N</em><sub><em>s</em></sub></span> steps yields
+the estimated channel matrix. The detection for <span class="math inline"><strong>P</strong></span> and <span class="math inline"><strong>C</strong></span> follows.</p>
+<p><em>The <code>MSE</code> of the estimates with respect to the
+effective channel matrix is also given.</em></p>
+<h3 id="low-complexity-receiver">Low-complexity receiver</h3>
+<ul>
+<li><p><code>dechirp</code> + <code>DFT</code></p></li>
+<li><p><code>DFT sequence</code>:</p>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812131221189.png" alt="DFT sequence">
+<figcaption aria-hidden="true">DFT sequence</figcaption>
+</figure>
+<p>where <span class="math inline">𝒯<sub><em>u</em></sub></span> denotes
+the set of antennas transmitting symbol <span class="math inline"><em>u</em></span>.</p></li>
+<li><p><code>Averaging to exploit the spatial diversity:</code></p>
+<figure>
+<img src="/2025/08/12/chirp_spread_spectrum/250812-blog-chirp-spread-spectrum/image-20250812131548283.png" alt="averaging">
+<figcaption aria-hidden="true">averaging</figcaption>
+</figure></li>
+<li><p><em>Scheme I</em></p>
+<ul>
+<li>Find <span class="math inline"><em>N</em><sub><em>t</em></sub></span> largest
+absolute values within <span class="math inline"><em>z̄</em>[<em>n</em>]</span>.</li>
+<li>Then the CSS symbol set <span class="math inline">𝒳</span> is
+employed for searching to achieve <code>ML</code>.</li>
+</ul></li>
+<li><p><em>Scheme II</em></p>
+<ul>
+<li>A predefined <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+used to separate the peaks such that the absolute value exceeding <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+the desired peaks and the one less than <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+regarded as noise.</li>
+<li>The corresponding probability of detection dependent on <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> is
+analyzed so that the analytical result with respect to <span class="math inline"><em>P</em><sub><em>t</em><em>h</em></sub></span> can
+be acquired. [<code>Specific details are omitted</code>]</li>
+</ul></li>
+</ul>
+<h2 id="paper-24---ncdt-css-enhancing-performance-using-noncoherent-distributed-transmission-of-chirp-spread-spectrum"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10848218">Paper 24 - NCDT-CSS
+Enhancing Performance Using Noncoherent Distributed Transmission of
+Chirp Spread Spectrum</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper is the details of `Paper 15`, where the channel estimation together with symbol detection is investigated specifically. [Meaningless]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-25---ris-assisted-dual-function-radar-and-secure-communications-based-on-frequency-shifted-chirp-spread-spectrum-index-modulation"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10310072">Paper 25 - RIS
+Assisted Dual-Function Radar and Secure Communications Based on
+Frequency-Shifted Chirp Spread Spectrum Index Modulation</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper considered the employment of CSS, RIS, and IM to comprehensively achieve ISAC.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-26---implementation-of-a-low-earth-orbit-satellite-chirped-preamble-detector"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10608398">Paper 26 -
+Implementation of a Low-Earth Orbit Satellite Chirped Preamble
+Detector</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the chirps employed within LEO scenarios. </span></span><br><span class="line"><span class="string">	Then, the oversampling techniques were exploited to enhance the overeall DETECTION performance. </span></span><br><span class="line"><span class="string">	[Simply for preamble synchronization without EMPHASIZED fractional delay or Doppler shifts]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="paper-27---ocdm-with-index-modulation-for-autonomous-underwater-vehicles-communication"><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10488729">Paper 27 - OCDM
+with Index Modulation for Autonomous Underwater Vehicles
+Communication</a></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">	This paper focused on the OCDM-IM for AUV communications, where the channel was assumed to be known.</span></span><br><span class="line"><span class="string">	Then, the ZF and MMSE were used for demodulating OCDM, followed by ML for mapping and symbols.</span></span><br><span class="line"><span class="string">	Finally, the LLR detector was employed for further delving into the bits.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Paper-notes/" rel="tag"># Paper notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/09/chirp_spread_spectrum/250809-blog-chirp-spread-spectrum/" rel="prev" title="Comm. CSS - part 04">
+                  <i class="fa fa-angle-left"></i> Comm. CSS - part 04
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/08/12/chirp_spread_spectrum/250813-blog-chirp-spread-spectrum/" rel="next" title="Comm. CSS - part 06">
+                  Comm. CSS - part 06 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Y. Ye</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
