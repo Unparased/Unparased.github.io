@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"unparased.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="The Mathematica Book [Stephen Wolfram]  Numerical Calculations  Basic expressions     Expression Meaning     x^y power   -x minus   x&#x2F;y divide   x y z or x*y*z multiply">
+    <meta name="description" content="The Mathematica Book [Stephen Wolfram]  Numerical Calculations Basic expressions     Expression Meaning    x^y power   -x minus   x&#x2F;y divide   x y z or x*y*z multiply   x+y+z add    Exact and approxi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Journey of Mathematica - Day 01">
 <meta property="og:url" content="https://unparased.github.io/2025/10/06/J_mathematica/day01/index.html">
 <meta property="og:site_name" content="Vigorous">
-<meta property="og:description" content="The Mathematica Book [Stephen Wolfram]  Numerical Calculations  Basic expressions     Expression Meaning     x^y power   -x minus   x&#x2F;y divide   x y z or x*y*z multiply">
+<meta property="og:description" content="The Mathematica Book [Stephen Wolfram]  Numerical Calculations Basic expressions     Expression Meaning    x^y power   -x minus   x&#x2F;y divide   x y z or x*y*z multiply   x+y+z add    Exact and approxi">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-10-06T13:34:33.000Z">
 <meta property="article:modified_time" content="2025-10-08T05:18:33.836Z">
@@ -252,7 +252,7 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#numerical-calculations"><span class="nav-number">1.</span> <span class="nav-text">Numerical Calculations</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Numerical-Calculations"><span class="nav-number">1.</span> <span class="nav-text">Numerical Calculations</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -265,7 +265,7 @@ mjx-container[display="true"] + br {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -372,117 +372,105 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody"><ul>
 <li><code>The Mathematica Book [Stephen Wolfram]</code></li>
 </ul>
-<h2 id="numerical-calculations">Numerical Calculations</h2>
-<ul>
+<h2 id="Numerical-Calculations"><a href="#Numerical-Calculations" class="headerlink" title="Numerical Calculations"></a>Numerical Calculations</h2><ul>
 <li>Basic <strong>expressions</strong></li>
 </ul>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Expression</th>
-<th style="text-align: center;">Meaning</th>
+<th align="center">Expression</th>
+<th align="center">Meaning</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>x^y</code></td>
-<td style="text-align: center;">power</td>
+<tbody><tr>
+<td align="center"><code>x^y</code></td>
+<td align="center">power</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>-x</code></td>
-<td style="text-align: center;">minus</td>
+<td align="center"><code>-x</code></td>
+<td align="center">minus</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>x/y</code></td>
-<td style="text-align: center;">divide</td>
+<td align="center"><code>x/y</code></td>
+<td align="center">divide</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>x y z</code> or
-<code>x*y*z</code></td>
-<td style="text-align: center;">multiply</td>
+<td align="center"><code>x y z</code> or <code>x*y*z</code></td>
+<td align="center">multiply</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>x+y+z</code></td>
-<td style="text-align: center;">add</td>
+<td align="center"><code>x+y+z</code></td>
+<td align="center">add</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
 <li>Exact and approximate results</li>
 </ul>
-<p>By default, <strong><em>Mathematica</em></strong> outputs the exact
-result as <code>2^100 = 1267650600228229401496703205376</code> rather
-than <code>1.26765*10^30</code>. To output the approximate results, the
-input should become <code>2^100//N</code> (<code>N</code> –
-numerical).</p>
-<p>When the input has an <strong>explicit decimal point</strong>, the
-corresponding output becomes an <strong>approximate result</strong>.</p>
+<p>By default, <em><strong>Mathematica</strong></em> outputs the exact result as <code>2^100 = 1267650600228229401496703205376</code> rather than <code>1.26765*10^30</code>. To output the approximate results, the input should become <code>2^100//N</code> (<code>N</code> – numerical).</p>
+<p>When the input has an <strong>explicit decimal point</strong>, the corresponding output becomes an <strong>approximate result</strong>.</p>
 <ul>
 <li>Basic <strong>mathematical functions</strong></li>
 </ul>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Function</th>
-<th style="text-align: center;">Meaning</th>
+<th align="center">Function</th>
+<th align="center">Meaning</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>Sqrt[x]</code></td>
-<td style="text-align: center;">square root</td>
+<tbody><tr>
+<td align="center"><code>Sqrt[x]</code></td>
+<td align="center">square root</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Exp[x]</code></td>
-<td style="text-align: center;">exponential</td>
+<td align="center"><code>Exp[x]</code></td>
+<td align="center">exponential</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Log[x]</code></td>
-<td style="text-align: center;">natural logarithm</td>
+<td align="center"><code>Log[x]</code></td>
+<td align="center">natural logarithm</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Log[b,x]</code></td>
-<td style="text-align: center;">logarithm to base <code>b</code></td>
+<td align="center"><code>Log[b,x]</code></td>
+<td align="center">logarithm to base <code>b</code></td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Sin[x], Cos[x], Tan[x]</code></td>
-<td style="text-align: center;">trigonometric functions</td>
+<td align="center"><code>Sin[x], Cos[x], Tan[x]</code></td>
+<td align="center">trigonometric functions</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>ArcSin[x], ArcCos[x], ArcTan[x]</code></td>
-<td style="text-align: center;">inverse trigonometric functions</td>
+<td align="center"><code>ArcSin[x], ArcCos[x], ArcTan[x]</code></td>
+<td align="center">inverse trigonometric functions</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>n!</code></td>
-<td style="text-align: center;">factorial</td>
+<td align="center"><code>n!</code></td>
+<td align="center">factorial</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Abs[x]</code></td>
-<td style="text-align: center;">absolute value</td>
+<td align="center"><code>Abs[x]</code></td>
+<td align="center">absolute value</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Round[x]</code></td>
-<td style="text-align: center;">closest integer</td>
+<td align="center"><code>Round[x]</code></td>
+<td align="center">closest integer</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Mod[n,m]</code></td>
-<td style="text-align: center;"><code>n</code> modulo
-<code>m</code></td>
+<td align="center"><code>Mod[n,m]</code></td>
+<td align="center"><code>n</code> modulo <code>m</code></td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Random[]</code></td>
-<td style="text-align: center;">pseudorandom number [0, 1]</td>
+<td align="center"><code>Random[]</code></td>
+<td align="center">pseudorandom number [0, 1]</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>Max[x,y,...], Min[x,y,...]</code></td>
-<td style="text-align: center;">maximum and minimum</td>
+<td align="center"><code>Max[x,y,...], Min[x,y,...]</code></td>
+<td align="center">maximum and minimum</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>FactorInteger[n]</code></td>
-<td style="text-align: center;">prime factors</td>
+<td align="center"><code>FactorInteger[n]</code></td>
+<td align="center">prime factors</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
     </div>
 
